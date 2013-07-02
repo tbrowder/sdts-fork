@@ -16,7 +16,7 @@
 
 #include <strstream>
 #include <iomanip>
-
+#include <cstring>
 #include <algorithm>
 
 #ifdef _MSC_VER

@@ -13,6 +13,7 @@
 // sio_8211DDR.cpp
 //
 
+#include <cstring>
 
 #ifdef NEED_TYPEINFO
 #include <typeinfo>

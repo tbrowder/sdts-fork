@@ -15,8 +15,7 @@
 #endif
 
 #include <cstdlib>
-
-
+#include <cstring>
 
 #include "sdts++/io/sio_Utils.h"
 
