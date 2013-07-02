@@ -1,6 +1,6 @@
 ## Process this file with automake to produce Makefile.in
 
-SUBDIRS := sdts++ doc
+SUBDIRS := sysutils sdts++ doc
 
 EXTRA_DIST := tests contrib
 
