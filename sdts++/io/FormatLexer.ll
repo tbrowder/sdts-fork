@@ -13,7 +13,7 @@
  *
  * Build by:
  *  
- * % flex -B -Psio_8211_yy FormatLexer.l
+ * % flex -B -Psio_8211_yy FormatLexer.ll
  *
  * Please not that you'll have to hand edit to generated lexer to correct 
  * two problems.
@@ -30,7 +30,6 @@
 
 				/* NUMBER, TYPE, CHAR, & yylval */
 #include "FormatParser.h" 
-
 
 %}
 
