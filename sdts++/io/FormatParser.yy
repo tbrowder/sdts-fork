@@ -83,6 +83,8 @@
 #include "sdts++/io/sio_8211Converter.h"
 #endif
 
+#include <stdlib.h> /* for free */
+
 /* buffer containing current subfield format string */
 
 extern const char * sio_8211_subfield_format_buffer;
