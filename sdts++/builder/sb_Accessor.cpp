@@ -157,24 +157,24 @@ sb_Accessor::~sb_Accessor( )
 
 static const char* module_mnemonics_[] =
 { 
-  {"CATS"},
-  {"CATD"},
-  {"DDOM"},
-  {"DDSH"},
-  {"MDOM"},
-  {"MDEF"},
-  {"DQHL"},
-  {"DQPA"},
-  {"DQAA"},
-  {"DQLC"},
-  {"DQCG"},
-  {"IDEN"},
-  {"IREF"},
-  {"LDEF"},
-  {"RSDF"},
-  {"STAT"},
-  {"XREF"},
-  {""}
+  "CATS",
+  "CATD",
+  "DDOM",
+  "DDSH",
+  "MDOM",
+  "MDEF",
+  "DQHL",
+  "DQPA",
+  "DQAA",
+  "DQLC",
+  "DQCG",
+  "IDEN",
+  "IREF",
+  "LDEF",
+  "RSDF",
+  "STAT",
+  "XREF",
+  ""
 }; // module_mnemonics
 
 
