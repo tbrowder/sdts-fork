@@ -196,7 +196,7 @@ sio_8211Converter_I::makeFixedSubfield(sc_Subfield& subfield,
     tmpBuf[length] = '\0';
     ss << tmpBuf;
     ss >> foo;
-   
+
     subfield.setI(foo);
     delete [] tmpBuf;
   }
@@ -206,7 +206,7 @@ sio_8211Converter_I::makeFixedSubfield(sc_Subfield& subfield,
     subfield.setUnvalued();    // show that it has no value
 
   }
-  
+
 return length;
 
 }
@@ -225,7 +225,7 @@ sio_8211Converter_I::addSubfield(sc_Subfield const& subfield,
   val << tempint;
   val >> foo;
 
-  buffer.addData(foo.c_str(), foo.length()); 
+  buffer.addData(foo.c_str(), foo.length());
 
   return 0;
 }
@@ -248,13 +248,13 @@ sio_8211Converter_I::addFixedSubfield(sc_Subfield const& subfield,
 
   getline( val, tmp_str );
 
-  buffer.addData( tmp_str.c_str(), length ); 
+  buffer.addData( tmp_str.c_str(), length );
 
   return 0;
 }
 
 // sio_Converter_R
-// Type "R" data is character representation of unscaled floating 
+// Type "R" data is character representation of unscaled floating
 // point data. (Such as "123.456")
 
 long
@@ -296,13 +296,13 @@ sio_8211Converter_R::addSubfield(sc_Subfield const& subfield,
 
   if ( ! subfield.getR(tempdouble) ) { return 0; } // could be null
 
-  val.setf( ios::fixed ); 
+  val.setf( ios::fixed );
   val.precision(8);
 
   val << tempdouble;
   val >> foo;
 
-  buffer.addData(foo.c_str(), foo.length()); 
+  buffer.addData(foo.c_str(), foo.length());
   return 0;
 }
 
@@ -323,7 +323,7 @@ sio_8211Converter_R::addFixedSubfield(sc_Subfield const& subfield,
   val.fill('0');               // XXX for S types
   val << setw(length) << tempdouble;
 
-  buffer.addData(val.str(), length); 
+  buffer.addData(val.str(), length);
 
   val.freeze(0);               // make sure that we free up memory
 
@@ -350,7 +350,7 @@ sio_8211Converter_S::makeFixedSubfield(sc_Subfield& subfield,
     tmpBuf[length] = '\0';
     ss << tmpBuf;
     ss >> foo;
-    
+
     subfield.setS(foo);
     delete [] tmpBuf;
   }
@@ -375,7 +375,7 @@ sio_8211Converter_S::addSubfield(sc_Subfield const& subfield,
   val.flags(ios::scientific | ios::uppercase);
   val << tempdouble;
   val >> foo;
-  buffer.addData(foo.c_str(), foo.length()); 
+  buffer.addData(foo.c_str(), foo.length());
   return 0;
 }
 
