@@ -89,6 +89,14 @@ else
 fi
 export BOOST_HEADER
 
+
+
+dnl
+dnl let's make sure the sysutils package is happy
+dnl
+
+
+
 echo "
 Configuration:
   Install path:               ${prefix}
@@ -105,6 +113,10 @@ AC_SUBST(CXX)
 AC_SUBST(LIBS)
 AC_SUBST(LEXLIB)
 AC_SUBST(BOOST_HEADER)
+
+
+AC_CONFIG_SUBDIRS(sysutils)
+
 
 AC_CONFIG_FILES([Makefile doc/Makefile contrib/Makefile contrib/pr8211/Makefile contrib/prsdts/Makefile contrib/mksdts/Makefile contrib/mkstat/Makefile contrib/tomksdts/Makefile contrib/sdtsdem2xyz/Makefile tests/Makefile sdts++/Makefile ])
 AC_OUTPUT
