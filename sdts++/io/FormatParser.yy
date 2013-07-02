@@ -83,7 +83,8 @@
 #include "sdts++/io/sio_8211Converter.h"
 #endif
 
-#include <stdlib.h> /* for free */
+#include <stdlib.h> /* header for libc function free */
+#include <stdio.h>  /* header for libc function perror */
 
 /* buffer containing current subfield format string */
 
