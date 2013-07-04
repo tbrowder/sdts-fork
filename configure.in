@@ -1,7 +1,3 @@
-dnl
-dnl $Id: configure.in,v 1.50 2003/06/10 18:39:04 mcoletti Exp $
-dnl
-
 AC_INIT
 AC_CONFIG_SRCDIR([sdts++/container/sc_Module.h])
 
@@ -95,16 +91,11 @@ dnl
 dnl let's make sure the sysutils package is happy
 dnl
 
-
-
 echo "
 Configuration:
   Install path:               ${prefix}
   Boost path:                 ${BOOST_PATH}
   Include dir:                ${includedir}"
-
-
-
 
 AC_SUBST(CPPFLAGS)
 AC_SUBST(CFLAGS)
