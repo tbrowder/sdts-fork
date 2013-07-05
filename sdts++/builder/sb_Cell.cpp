@@ -12,7 +12,7 @@
 // $Id: sb_Cell.cpp,v 1.6 1999/11/02 21:52:51 mcoletti Exp $
 //
 
-#include "sb_Cell.h"
+#include <sdts++/builder/sb_Cell.h>
 
 
 

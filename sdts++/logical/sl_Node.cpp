@@ -11,7 +11,7 @@
 //
 // $Id: sl_Node.cpp,v 1.1 2000/04/28 18:25:50 mcoletti Exp $
 
-#include "sl_Node.h"
+#include <sdts++/logical/sl_Node.h>
 
 
 static const char* ident_ = 

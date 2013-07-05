@@ -11,7 +11,7 @@
 //
 // $Id: sl_Point.cpp,v 1.2 2000/04/28 18:11:07 mcoletti Exp $
 
-#include "sl_Point.h"
+#include <sdts++/logical/sl_Point.h>
 
 
 static const char* ident_ = 

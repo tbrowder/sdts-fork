@@ -11,7 +11,7 @@
 //
 // $Id: sl_String.cpp,v 1.2 2002/11/24 22:07:44 mcoletti Exp $
 
-#include "sl_String.h"
+#include <sdts++/logical/sl_String.h>
 
 
 static const char* ident_ = 

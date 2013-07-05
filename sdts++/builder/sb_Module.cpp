@@ -10,7 +10,7 @@
 // including points of contact.
 //
 
-#include "sb_Module.h"
+#include <sdts++/builder/sb_Module.h>
 
 #include <iostream>
 
@@ -20,7 +20,7 @@
 
 
 #ifndef INCLUDED_SB_FOREIGNID_H
-#include "sb_ForeignID.h"
+#include <sdts++/builder/sb_ForeignID.h>
 #endif
 
 

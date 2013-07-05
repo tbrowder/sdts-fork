@@ -13,7 +13,7 @@
 // sio_8211Directory.cpp
 //
 
-#include "sio_8211Directory.h"
+#include <sdts++/io/sio_8211Directory.h>
 
 #ifdef _MSC_VER
 #pragma warning( disable : 4786 )

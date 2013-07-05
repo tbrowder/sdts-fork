@@ -10,11 +10,11 @@
 // including points of contact.
 //
 
-#include "sio_ConverterFactory.h"
+#include <sdts++/io/sio_ConverterFactory.h>
 
 #include <cctype>
 
-#include "io/sio_8211Converter.h"
+#include <sdts++/io/sio_8211Converter.h>
 
 
 using namespace std;

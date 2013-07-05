@@ -11,7 +11,7 @@
 //
 // $Id: sl_Polygon.cpp,v 1.1 2000/05/02 00:55:34 mcoletti Exp $
 
-#include "sl_Polygon.h"
+#include <sdts++/logical/sl_Polygon.h>
 
 
 static const char* ident_ = 

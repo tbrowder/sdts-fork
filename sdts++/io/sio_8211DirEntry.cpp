@@ -13,14 +13,14 @@
 // sio_8211DirEntry.cpp
 //
 
-#include "sio_8211DirEntry.h"
+#include <sdts++/io/sio_8211DirEntry.h>
 
 #ifndef INCLUDED_SIO_8211LEADER_H
-#include "sio_8211Leader.h"
+#include <sdts++/io/sio_8211Leader.h>
 #endif
 
 #ifndef INCLUDED_SIO_UTILS_H
-#include "sio_Utils.h"
+#include <sdts++/io/sio_Utils.h>
 #endif
 
 
