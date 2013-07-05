@@ -6,11 +6,11 @@
    */
 
 /*
-	FormatParser.y
+	FormatParser.yy
 
 	build parser by:
 
-	% bison -p sio_8211_yy FormatParser.y
+	% bison -p sio_8211_yy FormatParser.yy
 
 */
 
@@ -72,15 +72,15 @@
 #include <iostream>
 
 #ifndef INCLUDED_SIO8211FIELDFORMAT_H
-#include "sdts++/io/sio_8211FieldFormat.h"
+#include <sdts++/io/sio_8211FieldFormat.h>
 #endif
 
 #ifndef INCLUDED_SIO_CONVERTER_H
-#include "sdts++/io/sio_Converter.h"
+#include <sdts++/io/sio_Converter.h>
 #endif
 
 #ifndef INCLUDED_SIO_8211CONVERTER_H
-#include "sdts++/io/sio_8211Converter.h"
+#include <sdts++/io/sio_8211Converter.h>
 #endif
 
 #include <stdlib.h> /* header for libc function free */
