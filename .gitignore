@@ -1,6 +1,9 @@
 *.so
 *.a
-/autom4te.cache/
-/CMakeFiles/
+*~
+*.o
+autom4te.cache
+CMakeFiles
 Makefile
-/.deps/
+.deps
+.libs
