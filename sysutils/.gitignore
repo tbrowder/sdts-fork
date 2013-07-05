@@ -1,1 +1,8 @@
 /CMakeFiles/
+/Makefile
+/cmake_install.cmake
+/libsysutils.a
+/libsysutils.so
+/t_basename
+/t_dirname
+/t_stringutils
