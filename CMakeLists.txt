@@ -25,8 +25,8 @@ include_directories(.)
 
 add_subdirectory(sysutils)
 add_subdirectory(sdts++)
-#add_subdirectory(contrib)
 
+#add_subdirectory(contrib)
 #add_subdirectory(doc)
 #add_subdirectory(tests)
 
