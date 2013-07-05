@@ -14,19 +14,19 @@
 
 
 #ifndef INCLUDED_SIO_CONVERTERFACTORY_H
-#include "io/sio_ConverterFactory.h"
+#include <sdts++/io/sio_ConverterFactory.h>
 #endif
 
 #ifndef INCLUDED_SIO_8211CONVERTER_H
-#include "io/sio_8211Converter.h"
+#include <sdts++/io/sio_8211Converter.h>
 #endif
 
 #ifndef INCLUDED_SC_FIELD_H
-#include "container/sc_Field.h"
+#include <sdts++/container/sc_Field.h>
 #endif
 
 #ifndef INCLUDED_SB_UTILS_H
-#include "sb_Utils.h"
+#include <sdts++/builder/sb_Utils.h>
 #endif
 
 

@@ -18,12 +18,12 @@
 #include <string>
 
 #ifndef SB_MODULE_H
-#include "builder/sb_Module.h"
+#include <sdts++/builder/sb_Module.h>
 #endif
 
 
 #ifndef INCLUDED_SIO8211FIELDFORMAT_H
-#include "io/sio_8211FieldFormat.h"
+#include <sdts++/xio/sio_8211FieldFormat.h>
 #endif
 
 class  sb_ForeignID;

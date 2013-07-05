@@ -12,7 +12,7 @@
 // $Id: sb_Pnts.cpp,v 1.2 2002/11/24 22:07:42 mcoletti Exp $
 //
 
-#include "builder/sb_Pnts.h"
+#include <sdts++/builder/sb_Pnts.h>
 
 
 #include <iostream>
@@ -24,31 +24,31 @@
 #include <float.h>
 
 #ifndef INCLUDED_SB_UTILS_H
-#include "builder/sb_Utils.h"
+#include <sdts++/builder/sb_Utils.h>
 #endif
 
 #ifndef INCLUDED_SB_FOREIGNID_H
-#include "builder/sb_ForeignID.h"
+#include <sdts++/builder/sb_ForeignID.h>
 #endif
 
 #ifndef INCLUDED_SC_RECORD_H
-#include "container/sc_Record.h"
+#include <sdts++/container/sc_Record.h>
 #endif
 
 #ifndef INCLUDED_SC_FIELD_H
-#include "container/sc_Field.h"
+#include <sdts++/container/sc_Field.h>
 #endif
 
 #ifndef INCLUDED_SC_SUBFIELD_H
-#include "container/sc_Subfield.h"
+#include <sdts++/container/sc_Subfield.h>
 #endif
 
 #ifndef INCLUDED_SIO_8211CONVERTER_H
-#include "io/sio_8211Converter.h"
+#include <sdts++/io/sio_8211Converter.h>
 #endif
 
 #ifndef INCLUDED_SIO_CONVERTERFACTORY_H
-#include "io/sio_ConverterFactory.h"
+#include <sdts++/io/sio_ConverterFactory.h>
 #endif
 
 
