@@ -29,7 +29,7 @@
 #include <stdlib.h>
 
 				/* NUMBER, TYPE, CHAR, & yylval */
-#include "FormatParser.h" 
+#include <sdts++/io/FormatParser.h> 
 
 %}
 
