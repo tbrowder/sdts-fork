@@ -19,7 +19,7 @@
 
 #include <sdts++/io/sio_Utils.h>
 
-#include <sdts++/io/sio_ConverterFactory.h"
+#include <sdts++/io/sio_ConverterFactory.h>
 
 
 
