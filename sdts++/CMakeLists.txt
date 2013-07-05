@@ -1,5 +1,3 @@
-# Include the directory itself as a path to include directories
-set(CMAKE_INCLUDE_CURRENT_DIR ON)
 
 aux_source_directory(./builder BUILDER)
 #aux_source_directory(./container CONTAINER)
