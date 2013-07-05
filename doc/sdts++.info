@@ -90,7 +90,7 @@ instructions.
   4. `cd ../sysutils; bjam -sTOOLS=msvc'
 
 
-   Debug and release binaries for the sdts++ and dependant sysutils
+   Debug and release binaries for the sdts++ and dependent sysutils
 libraries will be in the `sdts++/bin' and `sysutils/bin' directory
 hierarchies, respectively.  Build behavior can be modified by editing
 the `Jamfile's located in `sdts++' and `sysutil'.  There also exists a
