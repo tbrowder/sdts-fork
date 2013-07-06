@@ -13,12 +13,9 @@
 
 #include <cstdlib> // for exit function
 
-using namespace std;
-
-
 #include "convert.h"
 
-
+using namespace std;
 
 void
 usage( string const & fn )
