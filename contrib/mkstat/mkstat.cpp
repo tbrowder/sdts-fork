@@ -20,8 +20,6 @@ using namespace std;
 
 #include "sysutils/fileutils.h"
 
-
-
 // stooopid IRIX has non-standard getopt() behavior; it returns -1
 // instead of EOF when the last command line argument is processed
 
