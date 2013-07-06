@@ -1,3 +1,4 @@
-// does the platform provide various functions?
+// does the platform provide various functions and files?
 #cmakedefine HAVE_BASENAME
+#cmakedefine HAVE_FLOAT_H
 

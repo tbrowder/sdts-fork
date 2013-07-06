@@ -21,7 +21,10 @@ set(CMAKE_INSTALL_PREFIX "/usr/local")
 
 # need some defines and a config file
 include(CheckFunctionExists.cmake) # copied from /usr/local/share/cmake-2.8/Modules
-check_function_exists (basename HAVE_BASENAME)
+include(CheckIncludeFiles.cmake) # copied from /usr/local/share/cmake-2.8/Modules
+
+check_function_exists(basename HAVE_BASENAME)
+check_include_files(float.h HAVE_FLOAT_H)
 configure_file(
   "${PROJECT_SOURCE_DIR}/sdts++/sdts-config.h.in"
   "${PROJECT_SOURCE_DIR}/sdts++/sdts-config.h"
@@ -38,7 +41,7 @@ add_subdirectory(sdts++)
 add_subdirectory(contrib)
 
 #add_subdirectory(doc)
-#add_subdirectory(tests)
+add_subdirectory(tests)
 
 # uninstall target (per CMake FAQ)
 configure_file(
