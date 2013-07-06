@@ -41,6 +41,7 @@ add_subdirectory(sdts++)
 add_subdirectory(contrib)
 
 #add_subdirectory(doc)
+enable_testing() # adds a test target
 add_subdirectory(tests)
 
 # uninstall target (per CMake FAQ)
