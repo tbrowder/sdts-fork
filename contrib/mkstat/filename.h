@@ -6,18 +6,18 @@
 
 #include <string>
 
-using namespace std;
+#include <sdts++/sdts-config.h>
 
 // takes the given file name and converts it to all lower depending on
 // what the global bool force_lowercase is set to
 
-string filename( string const & fn );
+std::string filename(std::string const& fn);
 
 #ifndef HAVE_BASENAME
 // UNIX basename for those systems that lack it.
-const char * basename(const char *);
+const char* basename(const char*);
 
 // UNIX dirname for those systems that lack it.
-string dirname( string const & );
+std::string dirname(std::string const&);
 
 #endif
