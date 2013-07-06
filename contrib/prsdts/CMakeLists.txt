@@ -8,3 +8,8 @@ target_link_libraries(prsdts
   fl
   sysutils
 )
+
+#=== INSTALL ==================
+install(TARGETS prsdts
+        DESTINATION bin
+)
