@@ -11,6 +11,8 @@
 #include <iostream>
 #include <string>
 
+#include <cstdlib> // for exit function
+
 using namespace std;
 
 
