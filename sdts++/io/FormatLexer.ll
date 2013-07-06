@@ -15,7 +15,7 @@
  *  
  * % flex -B -Psio_8211_yy FormatLexer.ll
  *
- * Please not that you'll have to hand edit to generated lexer to correct 
+ * Please note that you'll have to hand edit to generated lexer to correct 
  * two problems.
  *
  * 1. #ifndef WIN32 out the #include <unistd.h>
@@ -29,7 +29,7 @@
 #include <stdlib.h>
 
 				/* NUMBER, TYPE, CHAR, & yylval */
-#include <sdts++/io/FormatParser.h> 
+#include "FormatParser.hh"
 
 %}
 
