@@ -6,7 +6,7 @@
 
 using namespace std;
 
-#include "parser.h"
+#include "parser.hh"
 
 extern int    lineno;		// current line number
 extern string yylval_string;	// current string value
