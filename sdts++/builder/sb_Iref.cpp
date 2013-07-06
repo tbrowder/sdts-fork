@@ -364,7 +364,7 @@ ingest_record_( sb_Iref & iref,
       cerr << "sb_Iref::sb_Iref(sc_Record const&): "
            << "Not an Internal Spatial Reference record.";
       cerr << endl;
-#endif;
+#endif
       return false;
     }
 
