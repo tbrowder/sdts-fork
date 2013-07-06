@@ -65,3 +65,14 @@ add_library(sdts++ SHARED
   ${logical_SOURCES}
   ${Foo_SRCS}
 )
+
+#=== INSTALL ==================
+install(TARGETS sdts++
+        DESTINATION lib
+)
+
+install(
+  FILES
+    "${PROJECT_BINARY_DIR}/sdts++/sdts-config.h"
+  DESTINATION "include/sdts++"
+)
