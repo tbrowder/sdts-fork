@@ -18,6 +18,7 @@ static const char* _ident = "$Id: filename.cpp,v 1.1 1999/02/11 22:08:44 mcolett
 extern bool verbose;
 extern bool force_lowercase;
 
+using namespace std;
 
 inline
 static
