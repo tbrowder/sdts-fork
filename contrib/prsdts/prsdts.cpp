@@ -70,8 +70,9 @@ main( int argc, char** argv )
 
   int ch;
 
-  char * ifs_name = "-";
-  
+  //char * ifs_name = "-";
+  char* ifs_name = 0;
+
                                 // set up default converter hints for
                                 // these mnemonics
 
