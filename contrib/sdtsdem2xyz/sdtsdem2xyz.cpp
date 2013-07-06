@@ -2,6 +2,8 @@
 #include <fstream>
 #include <string>
 #include <deque>
+#include <cstdlib>
+
 #include <pair.h>
 
 #include <sysutils/fileutils.h>
