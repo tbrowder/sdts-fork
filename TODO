@@ -39,3 +39,7 @@ to be brought in to some of the classes, namely the top level classes
    no pressing need to implement those.
 
 4. Replace use of ``sysutils'' package with boost filesystem
+
+5. Eliminate deprecated sstream use and convert to stringstream.
+
+6. Improve CMake build system to make more general.
