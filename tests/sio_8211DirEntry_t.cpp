@@ -5,20 +5,17 @@
 
 #include <iostream>
 #include <strstream>
-
 #include <cassert>
+#include <cstring> // strlen
 
 #ifdef _MSC_VER
 #pragma warning(disable:4786)
 #endif
 
-using namespace std;
-
-
 #include <sdts++/io/sio_8211DirEntry.h>
 #include <sdts++/io/sio_8211DRLeader.h>
 
-
+using namespace std;
 
 int main(int argc, char** argv)
 {

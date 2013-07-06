@@ -20,22 +20,16 @@
 
 #include <iostream>
 #include <fstream>
-
-
-using namespace std;
-
-
 #include <cassert>
+#include <cstdlib> // exit
 
 #include <sdts++/container/sc_Module.h>
-
 #include <sdts++/builder/sb_Utils.h>
 #include <sdts++/builder/sb_Iref.h>
 #include <sdts++/builder/sb_Ddsh.h>
-
 #include <sdts++/io/sio_8211FieldFormat.h>
 
-
+using namespace std;
 
 void
 buildModule( sc_Module & module )

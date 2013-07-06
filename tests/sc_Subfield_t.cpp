@@ -6,9 +6,9 @@
 
 #include <cassert>
 #include <iostream>
-
 #include <cmath>
 #include <climits>
+#include <cstdlib> // exit
 
 #ifdef _MSC_VER
 #define HAVE_FLOAT_H
@@ -18,13 +18,9 @@
 #include <float.h>
 #endif
 
-
-using namespace std;
-
-
-
 #include <sdts++/container/sc_Subfield.h>
 
+using namespace std;
 
 const double MIN_DBL_DISTANCE = DBL_MIN * 2;
 const double MIN_FLT_DISTANCE = FLT_MIN * 2;

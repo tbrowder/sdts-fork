@@ -6,11 +6,11 @@
 #include <iostream>
 #include <fstream>
 #include <string>
-
-using namespace std;
+#include <cstdlib> // exit
 
 #include <sdts++/builder/sb_ForeignID.h>
 
+using namespace std;
 
 
 void

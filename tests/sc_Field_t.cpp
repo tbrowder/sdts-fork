@@ -11,13 +11,11 @@
 
 #include <cassert>
 #include <iostream>
-
-
-using namespace std;
-
+#include <cstdlib> // exit
 
 #include <sdts++/container/sc_Field.h>
 
+using namespace std;
 
 int
 main( int argc, char** argv )

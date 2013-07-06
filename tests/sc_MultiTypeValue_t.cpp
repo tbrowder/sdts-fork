@@ -3,6 +3,7 @@
 //
 
 #include <cassert>
+#include <cstdlib> // exit
 
 #ifdef HAVE_ISO_HEADERS
 #include <iostream>
@@ -10,14 +11,9 @@
 #include <iostream>
 #endif
 
-
-
-using namespace std;
-
-
-
 #include <sdts++/container/sc_MultiTypeValue.h>
 
+using namespace std;
 
 int
 main( int argc, char** argv )

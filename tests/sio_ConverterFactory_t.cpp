@@ -6,6 +6,7 @@ $Id: sio_ConverterFactory_t.cpp,v 1.1 2001/02/07 19:12:46 mcoletti Exp $
 
 #include <iostream>
 #include <cassert>
+#include <cstdlib> // exit
 
 #include <sdts++/io/sio_8211Converter.h>
 #include <sdts++/io/sio_ConverterFactory.h>
