@@ -1,0 +1,13 @@
+/usr/local/lib/libsysutils.so
+/usr/local/include/sdts++/fileutils.h
+/usr/local/include/sdts++/stringutils.h
+/usr/local/lib/libsdts++.so
+/usr/local/include/sdts++/sdts-config.h
+/usr/local/bin/prsdts
+/usr/local/bin/pr8211
+/usr/local/bin/mkstat
+/usr/local/share/man/man1/mkstat.1
+/usr/local/bin/tomksdts
+/usr/local/share/man/man1/tomksdts.1
+/usr/local/bin/sdtsdem2xyz
+/usr/local/share/man/man1/sdtsdem2xyz.1
