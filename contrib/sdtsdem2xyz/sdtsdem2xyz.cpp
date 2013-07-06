@@ -4,8 +4,6 @@
 #include <deque>
 #include <pair.h>
 
-using namespace std;
-
 #include <sysutils/fileutils.h>
 
 #include <sdts++/io/sio_Reader.h>
@@ -17,6 +15,7 @@ using namespace std;
 #include <sdts++/builder/sb_Iref.h>
 #include <sdts++/builder/sb_Rsdf.h>
 
+using namespace std;
 
 typedef pair<double,double> coordinate_t;
 
