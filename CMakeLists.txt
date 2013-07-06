@@ -2,13 +2,10 @@
 project(sdts)
 
 # States that CMake required version must be greater than 2.6
-cmake_minimum_required(VERSION 2.6)
+cmake_minimum_required(VERSION 2.8.11.1)
 
 # verbose messages
-set(CMAKE_VERBOSE_MAKEFILE ON)
-
-# gcc specific
-add_definitions(-DVECTOR_ITERATOR_POINTER_NOT_EQUIVALENT)
+#set(CMAKE_VERBOSE_MAKEFILE ON)
 
 # Appends the cmake/modules path inside the MAKE_MODULE_PATH variable
 # which stores the directories of additional CMake modules
@@ -19,14 +16,23 @@ set(CMAKE_MODULE_PATH ${sdts_SOURCE_DIR}/cmake/modules ${CMAKE_MODULE_PATH})
 
 #macro_ensure_out_of_source_build("${PROJECT_NAME} requires an out of source build.")
 
+# need some defines and a config file
+include(CheckFunctionExists.cmake) # copied from /usr/local/share/cmake-2.8/Modules
+check_function_exists (basename HAVE_BASENAME)
+configure_file (
+  "${PROJECT_SOURCE_DIR}/sdts++/sdts-config.h.in"
+  "${PROJECT_SOURCE_DIR}/sdts++/sdts-config.h"
+)
+
+
 # need this because of way files in subdirs call headers, e.g.,:
 #include <sdts++/io/sio_8211Converter.h>
 include_directories(.)
 
 add_subdirectory(sysutils)
 add_subdirectory(sdts++)
+add_subdirectory(contrib)
 
-#add_subdirectory(contrib)
 #add_subdirectory(doc)
 #add_subdirectory(tests)
 
