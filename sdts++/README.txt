@@ -16,11 +16,11 @@ The *.c files are included in the original library sources.
 
 Changes:
 
-We generate .cc files:
+We generate .c files:
 
-  flex++ -B --outfile=FormatLexer.cc io/FormatLexer.ll
+  flex -B --outfile=FormatLexer.c io/FormatLexer.ll
 
-  bison --defines -p sio_8211_yy --output=FormatParser.cc io/FormatParser.yy
+  bison --defines -p sio_8211_yy --output=FormatParser.c io/FormatParser.yy
 
 
 
