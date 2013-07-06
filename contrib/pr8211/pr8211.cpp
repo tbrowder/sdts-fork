@@ -9,8 +9,6 @@
 
 #include <algorithm>
 
-using namespace std;
-
 #include <sdts++/io/sio_8211DirEntry.h>
 #include <sdts++/io/sio_8211DDR.h>
 #include <sdts++/io/sio_8211DDRLeader.h>
@@ -19,7 +17,7 @@ using namespace std;
 #include <sdts++/io/sio_8211DRLeader.h>
 #include <sdts++/io/sio_8211Utils.h>
 
-
+using namespace std;
 
 void
 printDDRField(ostream& ostr, sio_8211DDRField const& field)
