@@ -10,6 +10,8 @@
 #include <climits>
 #include <cstdlib> // exit
 
+#include <sdts++/sdts-config.h>
+
 #ifdef _MSC_VER
 #define HAVE_FLOAT_H
 #endif
