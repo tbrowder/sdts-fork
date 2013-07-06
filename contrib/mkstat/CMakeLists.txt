@@ -9,3 +9,15 @@ target_link_libraries(mkstat
   sdts++
   sysutils
 )
+
+#=== INSTALL ==================
+install(TARGETS mkstat
+        DESTINATION bin
+)
+
+install(
+  FILES
+    "${PROJECT_SOURCE_DIR}/contrib/mkstat/mkstat.1"
+  DESTINATION "share/man/man1"
+)
+
