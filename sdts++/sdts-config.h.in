@@ -1,0 +1,3 @@
+// does the platform provide various functions?
+#cmakedefine HAVE_BASENAME
+
