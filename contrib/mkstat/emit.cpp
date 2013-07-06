@@ -5,6 +5,7 @@
 #include "emit.h"
 
 #include <iostream>
+#include <cstdlib> // for exit
 
 #include <sdts++/container/sc_Record.h>
 #include <sdts++/io/sio_Writer.h>
@@ -16,6 +17,7 @@ static const char* _ident = "$Id: emit.cpp,v 1.1 1999/02/11 22:08:44 mcoletti Ex
 
 extern bool verbose;
 
+using namespace std;
 
 void
 emit( sb_Module const & module, 
