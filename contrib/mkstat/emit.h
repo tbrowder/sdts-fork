@@ -10,15 +10,12 @@
 #include <string>
 #include <iostream>
 
-using namespace std;
-
 class sb_Module;
 class sio_8211Writer;
 
-
 // This function will take the state of the given builder module and
 // emit it as a record to the given writer.
-void emit( sb_Module const & module, sio_8211Writer& writer );
+void emit(sb_Module const& module, sio_8211Writer& writer );
 
 
 
@@ -28,7 +25,7 @@ void emit( sb_Module const & module, sio_8211Writer& writer );
 //
 template <class T>
 void
-emit_sed( string const& orig_str, T const& val, ostream& os )
+emit_sed(std::string const& orig_str, T const& val, std::ostream& os )
 {
   os << "s/" << orig_str << "/" << val << "/g\n";
 
@@ -40,14 +37,16 @@ emit_sed( string const& orig_str, T const& val, ostream& os )
 // This does what you'd expect.
 //
 inline
-string
-clipTrailingSpaces(string const& str)
+std::string
+clipTrailingSpaces(std::string const& str)
 {
-  string tmp_str( str );
+  std::string tmp_str( str );
 
-  string::size_type pos = tmp_str.find_last_not_of( " " );
+  std::string::size_type pos = tmp_str.find_last_not_of( " " );
 
-  if ( string::npos != pos ) { tmp_str.resize( pos + 1 ); }
+  if (std::string::npos != pos) {
+    tmp_str.resize( pos + 1 );
+  }
 
   return tmp_str;
 } // clipTrailingSpaces
