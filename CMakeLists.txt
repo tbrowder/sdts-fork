@@ -16,10 +16,13 @@ set(CMAKE_MODULE_PATH ${sdts_SOURCE_DIR}/cmake/modules ${CMAKE_MODULE_PATH})
 
 #macro_ensure_out_of_source_build("${PROJECT_NAME} requires an out of source build.")
 
+# where to install?
+set(CMAKE_INSTALL_PREFIX "/usr/local")
+
 # need some defines and a config file
 include(CheckFunctionExists.cmake) # copied from /usr/local/share/cmake-2.8/Modules
 check_function_exists (basename HAVE_BASENAME)
-configure_file (
+configure_file(
   "${PROJECT_SOURCE_DIR}/sdts++/sdts-config.h.in"
   "${PROJECT_SOURCE_DIR}/sdts++/sdts-config.h"
 )
@@ -29,6 +32,7 @@ configure_file (
 #include <sdts++/io/sio_8211Converter.h>
 include_directories(.)
 
+# all these have own install targets:
 add_subdirectory(sysutils)
 add_subdirectory(sdts++)
 add_subdirectory(contrib)
