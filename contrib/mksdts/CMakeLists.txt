@@ -12,3 +12,14 @@ add_custom_command(
 )
 
 add_executable(mksdts ${mksdts_SOURCES})
+
+#=== INSTALL ==================
+install(TARGETS mksdts
+        DESTINATION bin
+)
+
+install(
+  FILES
+    "${PROJECT_SOURCE_DIR}/contrib/mksdts/mksdts.1"
+  DESTINATION "share/man/man1"
+)
