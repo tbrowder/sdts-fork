@@ -7,3 +7,8 @@ target_link_libraries(pr8211
   sdts++
   sysutils
 )
+
+#=== INSTALL ==================
+install(TARGETS pr8211
+        DESTINATION bin
+)
