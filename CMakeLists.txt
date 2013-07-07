@@ -27,7 +27,7 @@ check_function_exists(basename HAVE_BASENAME)
 check_include_files(float.h HAVE_FLOAT_H)
 configure_file(
   "${PROJECT_SOURCE_DIR}/sdts++/sdts-config.h.in"
-  "${PROJECT_SOURCE_DIR}/sdts++/sdts-config.h"
+  "${PROJECT_BINARY_DIR}/sdts++/sdts-config.h"
 )
 
 
