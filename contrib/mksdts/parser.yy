@@ -129,14 +129,14 @@ echo_subfield_assignment( string const& label, T const & value )
   double d_val;
 }
 
-%token <i_val> INT, BINARY
+%token <i_val> INT BINARY
 %token <d_val> FLOAT
-%token STRING, ID
-%token FIELD, RECORD, MODULE
-%token BI8, BI16, BI24, BI32
-%token BUI8, BUI16, BUI24, BUI32
-%token BFP32, BFP64
-%token REGEXP, DROP
+%token STRING ID
+%token FIELD RECORD MODULE
+%token BI8 BI16 BI24 BI32
+%token BUI8 BUI16 BUI24 BUI32
+%token BFP32 BFP64
+%token REGEXP DROP
 
 
 %start module_def
