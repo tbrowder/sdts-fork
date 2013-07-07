@@ -13,19 +13,15 @@
 
 #include <iostream>
 #include <fstream>
-
 #include <cassert>
-
+#include <cstdlib> // exit
 
 #include <sdts++/io/sio_8211Converter.h>
 #include <sdts++/io/sio_Reader.h>
 #include <sdts++/container/sc_Record.h>
 #include <sdts++/builder/sb_Catd.h>
 
-
 using namespace std;
-
-
 
 int
 main( int argc, char** argv )

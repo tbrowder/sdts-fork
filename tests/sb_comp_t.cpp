@@ -11,17 +11,16 @@
 //
 
 
-
 #include <iostream>
 #include <fstream>
 #include <cassert>
-
-using namespace std;
+#include <cstdlib> // exit
 
 #include <sdts++/io/sio_Reader.h>
 #include <sdts++/container/sc_Record.h>
 #include <sdts++/builder/sb_Comp.h>
 
+using namespace std;
 
 int
 main( int argc, char** argv )

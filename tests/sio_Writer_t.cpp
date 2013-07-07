@@ -5,25 +5,18 @@
 #include <iostream>
 #include <iterator>
 #include <fstream>
+#include <cstdlib> // exit
 
-
+#include <sdts++/io/sio_Writer.h>
+#include <sdts++/container/sc_Record.h>
+#include <sdts++/container/sc_Field.h>
+#include <sdts++/container/sc_Subfield.h>
+#include <sdts++/io/sio_ConverterFactory.h>
 
 using namespace std;
 
 
-
-#include <sdts++/io/sio_Writer.h>
-
-
-#include <sdts++/container/sc_Record.h>
-#include <sdts++/container/sc_Field.h>
-#include <sdts++/container/sc_Subfield.h>
-
-#include <sdts++/io/sio_ConverterFactory.h>
-
-
 #define VERBOSE
-
 
 //
 // makes a bogus schema for a repeating binary field
