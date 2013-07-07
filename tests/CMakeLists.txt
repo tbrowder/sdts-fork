@@ -51,6 +51,68 @@ configure_file(
   COPYONLY
 )
 
+# need some input files for the tests
+configure_file(
+  "${PROJECT_SOURCE_DIR}/tests/foo.ddf"
+  "${PROJECT_BINARY_DIR}/tests/foo.ddf"
+  COPYONLY
+)
+configure_file(
+  "${PROJECT_SOURCE_DIR}/tests/abcdxref.ddf"
+  "${PROJECT_BINARY_DIR}/tests/abcdxref.ddf"
+  COPYONLY
+)
+configure_file(
+  "${PROJECT_SOURCE_DIR}/tests/abcdspdm.ddf"
+  "${PROJECT_BINARY_DIR}/tests/abcdspdm.ddf"
+  COPYONLY
+)
+configure_file(
+  "${PROJECT_SOURCE_DIR}/tests/abcdpoly.ddf"
+  "${PROJECT_BINARY_DIR}/tests/abcdpoly.ddf"
+  COPYONLY
+)
+configure_file(
+  "${PROJECT_SOURCE_DIR}/tests/abcdpnts.ddf"
+  "${PROJECT_BINARY_DIR}/tests/abcdpnts.ddf"
+  COPYONLY
+)
+configure_file(
+  "${PROJECT_SOURCE_DIR}/tests/abcdiref.ddf"
+  "${PROJECT_BINARY_DIR}/tests/abcdiref.ddf"
+  COPYONLY
+)
+configure_file(
+  "${PROJECT_SOURCE_DIR}/tests/abcdiden.ddf"
+  "${PROJECT_BINARY_DIR}/tests/abcdiden.ddf"
+  COPYONLY
+)
+configure_file(
+  "${PROJECT_SOURCE_DIR}/tests/abcddddf.ddf"
+  "${PROJECT_BINARY_DIR}/tests/abcddddf.ddf"
+  COPYONLY
+)
+configure_file(
+  "${PROJECT_SOURCE_DIR}/tests/abcdddom.ddf"
+  "${PROJECT_BINARY_DIR}/tests/abcdddom.ddf"
+  COPYONLY
+)
+configure_file(
+  "${PROJECT_SOURCE_DIR}/tests/abcdcomp.ddf"
+  "${PROJECT_BINARY_DIR}/tests/abcdcomp.ddf"
+  COPYONLY
+)
+configure_file(
+  "${PROJECT_SOURCE_DIR}/tests/abcdcell.ddf"
+  "${PROJECT_BINARY_DIR}/tests/abcdcell.ddf"
+  COPYONLY
+)
+configure_file(
+  "${PROJECT_SOURCE_DIR}/tests/abcdcatd.ddf"
+  "${PROJECT_BINARY_DIR}/tests/abcdcatd.ddf"
+  COPYONLY
+)
+
 add_test(NAME sh_Comp_t
          WORKING_DIRECTORY "${PROJECT_BINARY_DIR}/tests"
          COMMAND sh_Comp_t
@@ -167,3 +229,21 @@ target_link_libraries(sl_Polygon_t boost_system sdts++ fl sysutils)
 
 add_executable(sl_Node_t sl_Node_t.cpp)
 target_link_libraries(sl_Node_t boost_system sdts++ fl sysutils)
+
+add_executable(sb_comp_t sb_comp_t.cpp)
+target_link_libraries(sb_comp_t boost_system sdts++ fl sysutils)
+
+add_executable(sio_8211_t sio_8211_t.cpp)
+target_link_libraries(sio_8211_t boost_system sdts++ fl sysutils)
+
+add_executable(sio_ReadWrite_t sio_ReadWrite_t.cpp)
+target_link_libraries(sio_ReadWrite_t boost_system sdts++ fl sysutils)
+
+add_executable(sio_Writer_t sio_Writer_t.cpp)
+target_link_libraries(sio_Writer_t boost_system sdts++ fl sysutils)
+
+add_executable(sb_accessor_t sb_accessor_t.cpp)
+target_link_libraries(sb_accessor_t boost_system sdts++ fl sysutils)
+
+add_executable(sb_Directory_t sb_Directory_t.cpp)
+target_link_libraries(sb_Directory_t boost_system sdts++ fl sysutils)
