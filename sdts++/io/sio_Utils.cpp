@@ -16,12 +16,16 @@
 
 #include <cstdlib>
 #include <cstring>
-#include <cstrings>
+#include <vector>
 
-#include <boost/filesystem/path.hpp>
+#include <boost/filesystem.hpp>
 
 #include <sdts++/io/sio_Utils.h>
 #include <sdts++/io/sio_ConverterFactory.h>
+#include <sdts++/fileutils.h>
+
+using namespace std;
+using namespace boost::filesystem;
 
 static const char * ident_ = 
   "$Id: sio_Utils.cpp,v 1.5 2002/10/07 20:44:24 mcoletti Exp $";
@@ -139,16 +143,16 @@ sio_Utils::find_file_case_insensitive(const string& orig_fname,
     // systems
     sort(v.begin(), v.end());
 
-    for (vec::const_iterator i = v.begin(); i != v.end(); ++i) {
+    for (vector<path>::const_iterator i = v.begin(); i != v.end(); ++i) {
       if (is_directory(*i))
         continue;
 
-      size_t L2 = (*i).size();
+      size_t L2 = (*i).string().size();
       // match?
       if (L1 == L2) {
-        if (!strncasecmp(orig_fname.c_str(), (*i).c_str(), L1)) {
+        if (!strncasecmp(orig_fname.c_str(), (*i).string().c_str(), L1)) {
           // a match
-          insens_fname = *i;
+          insens_fname = (*i).string();
           return true;
         }
       }
@@ -158,5 +162,5 @@ sio_Utils::find_file_case_insensitive(const string& orig_fname,
     assert(0 && "unexpected ERROR!");
   }
 
-  return false
+  return false;
 }
