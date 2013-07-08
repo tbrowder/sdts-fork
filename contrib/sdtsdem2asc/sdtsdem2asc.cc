@@ -37,8 +37,10 @@ main(int argc, char** argv)
 {
   if (argc < 2) {
     Printf("Usage: %s <SDTS CATD file>\n");
-    exit(1)
+    exit(1);
   }
+
+  string ifil = argv[1];
 
   // first get the spatial address of top left corner
    coordinate_t top_left_corner;
@@ -48,7 +50,10 @@ main(int argc, char** argv)
    sb_Rsdf rsdf_record;
 
    if (!accessor.get(rsdf_record)) {
-     error("unable to read RSDF module");
+     string msg;
+     SPrintf(msg, "ERROR:  Unable to read RSDF module for input file '%s'.\n")
+       (ifil);
+     error(msg);
    }
 
    rsdf_record.getSADR(top_left_corner.first,
@@ -62,7 +67,10 @@ main(int argc, char** argv)
    sb_Iref iref_record;
 
    if (!accessor.get(iref_record)) {
-      error("unable to read IREF module");
+     string msg;
+     SPrintf(msg, "ERROR:  Unable to read IREF module for input file '%s'.\n")
+       (ifil);
+     error(msg);
    }
 
    double x_resolution, y_resolution;
@@ -74,20 +82,22 @@ main(int argc, char** argv)
    //          << " y resolution: " << y_resolution
    //          << endl;
 
+   // finally, crack open the CELL module and start blatting
+   // coordinates
 
-   // finally, crack open the CELL module and start blatting coordinates
 
-
-   // get binary converters for
-   // CELL module
+   // get binary converters for CELL module
 
    sio_8211_converter_dictionary converters;
 
-   if (!sb_Utils::addConverters(argv[1], converters)) {
-      error("unable to read CATD module " + string(argv[1]));
+   if (!sb_Utils::addConverters(ifil.c_str(), converters)) {
+     string msg;
+     SPrintf(msg, "ERROR:  Unable to read CATD module '%s'.\n")
+       (ifil);
+     error(msg);
    }
 
-   sb_Directory directory(argv[1]);
+   sb_Directory directory(ifil.c_str());
 
    sb_Catd catd_record;
 
