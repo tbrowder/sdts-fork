@@ -70,7 +70,7 @@ class sb_Accessor
 
 
       /// return the CATD module file name
-      std::string const & fileName() const;
+      std::string const& fileName() const;
 
       /*! 
        * \fn  bool get( sb_Module & module, sio_8211_converter_dictionary* cv = 0x0 )
@@ -101,16 +101,15 @@ class sb_Accessor
        *  appropriate hints for reading binary data.
        *
        */
-      bool get( sb_Module & module, sio_8211_converter_dictionary* cv = 0x0 );
-
+      bool get(sb_Module & module, sio_8211_converter_dictionary* cv = 0x0 );
 
    private:
 
       /// NOT NEEDED
-      sb_Accessor( sb_Accessor const & );
+      sb_Accessor(sb_Accessor const&);
 
       /// NOT NEEDED
-      sb_Accessor& operator=( sb_Accessor const & );
+      sb_Accessor& operator=(sb_Accessor const&);
 
       /// hook to hidden internal data structure
       sb_Accessor_Imp* imp_;

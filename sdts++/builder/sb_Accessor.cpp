@@ -73,23 +73,24 @@ static const char* ident_ =
 
 struct moduleDescriptor
 {
-  boost::shared_ptr<boost::filesystem::ifstream> stream;    // stream pointing to an SDTS module file
-                                // boost::shared_ptr to keep a canonical copy once all
-                                // the dust settles from the ctors and copy
-                                // ctors that the STL map::insert() is gonna do
+  // stream pointing to an SDTS module file
+  // boost::shared_ptr to keep a canonical copy once all
+  // the dust settles from the ctors and copy
+  // ctors that the STL map::insert() is gonna do
+  boost::shared_ptr<boost::filesystem::ifstream> stream;
 
-  boost::filesystem::path       file_path; // the corresponding file path for the given 
-                                // stream;  to be used to open the stream
-                                // only if the user wants to access the module
+  // the corresponding file path for the given
+  // stream;  to be used to open the stream
+  // only if the user wants to access the module
+  boost::filesystem::path file_path;
 
-
-                                // its corresponding reader;
-                                // boost::shared_ptr<> insures that we've got a
-                                // canonical copy; also we have to
-                                // have dynamically allocate a reader
-                                // as it doesn't support a copy ctor,
-                                // and so can't be inserted into a STL
-                                // container
+  // its corresponding reader;
+  // boost::shared_ptr<> insures that we've a
+  // canonical copy; also we have to
+  // have dynamically allocate a reader
+  // as it doesn't support a copy ctor,
+  // and so can't be inserted into a STL
+  // container
   boost::shared_ptr<sio_8211Reader> reader; 
  
 
@@ -106,29 +107,23 @@ struct moduleDescriptor
 
 }; // struct moduleDescriptor
 
-
-
 struct sb_Accessor_Imp
-{                               // dictionary of module contexts keyed by
-                                // their respective module type
+{
+  // dictionary of module contexts keyed by
+  // their respective module type
+  map<string,moduleDescriptor> modules;
 
-      map<string,moduleDescriptor> modules;
+  /// CATD file name
+  std::string fileName;
 
-      /// CATD file name
-      std::string fileName;
+  sb_Accessor_Imp( )
+    {}
 
-
-      sb_Accessor_Imp( )
-      {}
-
-      sb_Accessor_Imp( std::string const & fn )
-         : fileName( fn )
-      {}
+  sb_Accessor_Imp( std::string const & fn )
+    : fileName( fn )
+    {}
 
 }; // struct sb_Accessor_imp
-
-
-
 
 sb_Accessor::sb_Accessor( )
   : imp_( new sb_Accessor_Imp )
