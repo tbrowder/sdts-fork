@@ -17,60 +17,58 @@ removeEndSlashes(string& path)
 
    // if it's a '/' shrink ``path'' by one to remove it
    if (string::npos != last_pos) {
-      if (path[last_pos] == '/' ) {
+      if (path[last_pos] == '/') {
         path.resize(path.size() - 1);
       }
-   } 
+   }
 
 } // removeEndSlashes(string& path)
 
-
 string
-fileutils::dirname( string const & original_path )
+fileutils::dirname(string const& original_path)
 {
    // we want our own copy to mangle
-   string path( original_path );
+   string path(original_path);
 
-   if ( ! path.size() )         // if we get a null path, return "."
-   {
-      return string(".");
+   if (!path.size()) {
+     // if we get a null path, return "."
+     return string(".");
    }
 
-   removeEndSlashes( path );
+   removeEndSlashes(path);
 
-   string::size_type last_pos = path.find_last_of( "/" );
+   string::size_type last_pos = path.find_last_of("/");
 
-   if ( string::npos != last_pos ) // if we found a '/'
-   {
-      return path.substr( 0, last_pos );
-   } 
+   if (string::npos != last_pos) {
+     // if we found a '/'
+     return path.substr(0, last_pos);
+   }
 
-   return string( "." );        // no '/' in path, so just return $CWD
+   return string(".");        // no '/' in path, so just return $CWD
 
 } // fileutils::dirname
 
-
-
 string
-fileutils::basename( string const & original_path )
+fileutils::basename(string const& original_path)
 {
    // we want our own copy to mangle
-   string path( original_path );
+   string path(original_path);
 
-   if ( ! path.size() )         // if we get a null path, return ""
-   {
-      return string( "" );
+   if (!path.size()) {
+     // if we get a null path, return ""
+     return string("");
    }
 
-   removeEndSlashes( path );
+   removeEndSlashes(path);
 
-   string::size_type last_pos = path.find_last_of( "/" );
+   string::size_type last_pos = path.find_last_of("/");
 
-   if ( string::npos != last_pos ) // if we found a '/'
-   {
-      return path.substr( last_pos + 1, path.size()  );
+   if (string::npos != last_pos) {
+     // if we found a '/'
+     return path.substr(last_pos + 1, path.size());
    } 
 
-   return path;                 // no '/' in path, so just return original
+   // no '/' in path, so just return original
+   return path;
 
 } // fileutils::basename
