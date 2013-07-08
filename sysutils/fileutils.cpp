@@ -1,6 +1,5 @@
 #include "fileutils.h"
 
-
 using namespace std;
 
 /**
@@ -9,21 +8,21 @@ using namespace std;
 */
 static
 void
-removeEndSlashes( string & path )
+removeEndSlashes(string& path)
 {
    // find the last non-space character (because some paths may be
    // malformed in that they may have trailing spaces for some goofy
    // reason)
-   string::size_type last_pos = path.find_last_not_of( " " );
+   string::size_type last_pos = path.find_last_not_of(" ");
 
    // if it's a '/' shrink ``path'' by one to remove it
-   if ( string::npos != last_pos )
-   {
-      if ( path[last_pos] == '/' )
-      { path.resize( path.size() - 1 ); }
+   if (string::npos != last_pos) {
+      if (path[last_pos] == '/' ) {
+        path.resize(path.size() - 1);
+      }
    } 
 
-} // removeEndSlashes( string & path )
+} // removeEndSlashes(string& path)
 
 
 string
