@@ -16,17 +16,15 @@
 
 #include <cstdlib>
 #include <cstring>
+#include <cstrings>
+
+#include <boost/filesystem/path.hpp>
 
 #include <sdts++/io/sio_Utils.h>
-
 #include <sdts++/io/sio_ConverterFactory.h>
-
-
 
 static const char * ident_ = 
   "$Id: sio_Utils.cpp,v 1.5 2002/10/07 20:44:24 mcoletti Exp $";
-
-
 
 long
 sio_Utils::getLong(char const* buf, long startpos, long length)
@@ -45,9 +43,6 @@ sio_Utils::getLong(char const* buf, long startpos, long length)
    return result;
 
 } // sio_Utils::getLong
-
-
-
 
 string
 sio_Utils::getString(char const* buf, long startpos, long length)
@@ -124,4 +119,44 @@ sio_Utils::dumpConverterDictionary( sio_8211_converter_dictionary const & cd,
 
 } // dump_converter_dictionary
 
+bool
+sio_Utils::find_file_case_insensitive(const string& orig_fname,
+                                      string& insens_fname)
+{
+  // get dir from file name
+  string dir   = fileutils::dirname(orig_fname);
+  string fname = fileutils::basename(orig_fname);
 
+  size_t L1 = fname.size();
+
+  // check all files in the dir
+  path p(dir);
+  if (is_directory(p)) {
+    vector<path> v;
+    copy(directory_iterator(p), directory_iterator(), back_inserter(v));
+
+    // sort, since directory iteration is not ordered on some file
+    // systems
+    sort(v.begin(), v.end());
+
+    for (vec::const_iterator i = v.begin(); i != v.end(); ++i) {
+      if (is_directory(*i))
+        continue;
+
+      size_t L2 = (*i).size();
+      // match?
+      if (L1 == L2) {
+        if (!strncasecmp(orig_fname.c_str(), (*i).c_str(), L1)) {
+          // a match
+          insens_fname = *i;
+          return true;
+        }
+      }
+    }
+  }
+  else {
+    assert(0 && "unexpected ERROR!");
+  }
+
+  return false
+}
