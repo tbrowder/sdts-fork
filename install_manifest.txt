@@ -13,3 +13,5 @@
 /usr/local/share/man/man1/sdtsdem2xyz.1
 /usr/local/bin/tomksdts
 /usr/local/share/man/man1/tomksdts.1
+/usr/local/bin/sdtsdem2asc
+/usr/local/share/man/man1/sdtsdem2asc.1
