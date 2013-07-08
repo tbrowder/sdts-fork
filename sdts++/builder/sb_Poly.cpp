@@ -233,7 +233,7 @@ else
 if ( sb_Utils::getFieldByMnem( record,"ATID",curfield) )
  	{
 	//As this is potentially a repeating field, we just keep
-	//grabbing fileds until we get one that's well, not anAttributeID
+	//grabbing fields until we get one that's well, not anAttributeID
 	  while ( curfield != record.end() && curfield->mnemonic() == "ATID" )
 	    {
 
@@ -249,7 +249,7 @@ if ( sb_Utils::getFieldByMnem( record,"ATID",curfield) )
 	}
 else
 {
-  //this is an optional filed, so no worries if we get here
+  //this is an optional field, so no worries if we get here
 }
 
 // return if we've exhausted all fields in the given record
@@ -260,7 +260,7 @@ else
 if ( sb_Utils::getFieldByMnem( record,"RFID",curfield) )
 {
   //As this is potentially a repeating field, we just keep
-  //grabbing fileds until we get one that's well, not anRingID
+  //grabbing fields until we get one that's well, not anRingID
   while (  curfield != record.end() && curfield->mnemonic() == "RFID" )
     {
 
@@ -276,7 +276,7 @@ if ( sb_Utils::getFieldByMnem( record,"RFID",curfield) )
 }
 else
 {
-  //this is an optional filed, so no worries if we get here
+  //this is an optional field, so no worries if we get here
 }
 
 // return if we've exhausted all fields in the given record
@@ -287,7 +287,7 @@ else
 if (  sb_Utils::getFieldByMnem( record,"CHID",curfield) )
 {
   //As this is potentially a repeating field, we just keep
-  //grabbing fileds until we get one that's well, not anChainID
+  //grabbing fields until we get one that's well, not anChainID
   while (  curfield != record.end() && curfield->mnemonic() == "CHID" )
     {
 
@@ -303,7 +303,7 @@ if (  sb_Utils::getFieldByMnem( record,"CHID",curfield) )
 }
 else
 {
-  //this is an optional filed, so no worries if we get here
+  //this is an optional field, so no worries if we get here
 }
 
 // return if we've exhausted all fields in the given record
@@ -314,7 +314,7 @@ else
 if ( sb_Utils::getFieldByMnem( record,"CPID",curfield) )
 {
   //As this is potentially a repeating field, we just keep
-  //grabbing fileds until we get one that's well, not anCompositeID
+  //grabbing fields until we get one that's well, not anCompositeID
   while (  curfield != record.end() && curfield->mnemonic() == "CPID" )
     {
 
@@ -330,7 +330,7 @@ if ( sb_Utils::getFieldByMnem( record,"CPID",curfield) )
 }
 else
 {
-  //this is an optional filed, so no worries if we get here
+  //this is an optional field, so no worries if we get here
 }
 
 // return if we've exhausted all fields in the given record
@@ -341,10 +341,10 @@ else
 if ( sb_Utils::getFieldByMnem( record,"RPID",curfield) )
 {
   //As this is potentially a repeating field, we just keep
-  //grabbing fileds until we get one that's well, not anRepresentationID
+  //grabbing fields until we get one that's well, not anRepresentationID
   while (  curfield != record.end() && curfield->mnemonic() == "RPID" )
     {
-      
+
       poly_imp._RepresentationIDs.push_back( sb_ForeignID() );
       if ( ! poly_imp._RepresentationIDs.back().assign( *curfield ) )
 	{
@@ -357,7 +357,7 @@ if ( sb_Utils::getFieldByMnem( record,"RPID",curfield) )
 }
 else
 {
-  //this is an optional filed, so no worries if we get here
+  //this is an optional field, so no worries if we get here
 }
 
 

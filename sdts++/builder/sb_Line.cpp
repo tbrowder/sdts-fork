@@ -270,7 +270,7 @@ _ingest_record( sb_Line& line, sb_Line_Imp &line_imp, sc_Record const& record )
    }
    else
    {
-      // this is an optional filed, so no worries if we get here
+      // this is an optional field, so no worries if we get here
    }
 
 
@@ -342,7 +342,7 @@ _ingest_record( sb_Line& line, sb_Line_Imp &line_imp, sc_Record const& record )
    }
    else
    {
-      // this is an optional filed, so no worries if we get here
+      // this is an optional field, so no worries if we get here
    }
 
 
@@ -350,7 +350,7 @@ _ingest_record( sb_Line& line, sb_Line_Imp &line_imp, sc_Record const& record )
 //SADR
 //SADR are typically repeating fields and so will be stored as
 //consolidatedSADRsc_Fields.  Therfore we'll set an sb_Spatial
-//with the current (X,Y) from the currentSADR, add it to the 
+//with the current (X,Y) from the currentSADR, add it to the
 //_SpatialAddress container, and then increment to the nextSADR,
 //if any
    if ( sb_Utils::getFieldByMnem( record,"SADR" ,curfield) )
@@ -360,12 +360,12 @@ _ingest_record( sb_Line& line, sb_Line_Imp &line_imp, sc_Record const& record )
       {
          sb_Spatial tmp_spatial;
 
-         for ( cursubfield = curfield->begin(); 
-               cursubfield != curfield->end(); 
+         for ( cursubfield = curfield->begin();
+               cursubfield != curfield->end();
                cursubfield++ )
          {
             if ( cursubfield->mnemonic() == "X" )
-            { 
+            {
                tmp_spatial.x() = *cursubfield;
             }
             else if  ( cursubfield->mnemonic() == "Y" )
@@ -410,7 +410,7 @@ _ingest_record( sb_Line& line, sb_Line_Imp &line_imp, sc_Record const& record )
    }
    else
    {
-      // this is an optional filed, so no worries if we get here
+      // this is an optional field, so no worries if we get here
    }
 
 
@@ -434,7 +434,7 @@ _ingest_record( sb_Line& line, sb_Line_Imp &line_imp, sc_Record const& record )
    }
    else
    {
-      // this is an optional filed, so no worries if we get here
+      // this is an optional field, so no worries if we get here
    }
 
 

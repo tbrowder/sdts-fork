@@ -239,7 +239,7 @@ _ingest_record( sb_Comp& comp, sb_Comp_Imp &comp_imp, sc_Record const& record )
    }
    else
    {
-      // this is an optional filed, so no worries if we get here
+      // this is an optional field, so no worries if we get here
    }
 
 
@@ -263,7 +263,7 @@ _ingest_record( sb_Comp& comp, sb_Comp_Imp &comp_imp, sc_Record const& record )
    }
    else
    {
-      // this is an optional filed, so no worries if we get here
+      // this is an optional field, so no worries if we get here
    }
 
 
@@ -287,7 +287,7 @@ _ingest_record( sb_Comp& comp, sb_Comp_Imp &comp_imp, sc_Record const& record )
    }
    else
    {
-      // this is an optional filed, so no worries if we get here
+      // this is an optional field, so no worries if we get here
    }
 
 
