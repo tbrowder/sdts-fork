@@ -30,7 +30,7 @@ fileutils::dirname(string const& original_path)
    // we want our own copy to mangle
    string path(original_path);
 
-   if (!path.size()) {
+   if (path.empty()) {
      // if we get a null path, return "."
      return string(".");
    }
@@ -54,7 +54,7 @@ fileutils::basename(string const& original_path)
    // we want our own copy to mangle
    string path(original_path);
 
-   if (!path.size()) {
+   if (path.empty()) {
      // if we get a null path, return ""
      return string("");
    }
