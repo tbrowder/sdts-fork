@@ -49,6 +49,10 @@ namespace  sio_Utils
    void dumpConverterDictionary( sio_8211_converter_dictionary const & cd,
                                  ostream & os );
 
+  /// find a suitable, case insensitive filename
+   bool find_file_case_insensitive(const std::string& orig_fname,
+                                   std::string& insens_fname);
+
 } // namespace sio_Utils
 
 #endif  // INCLUDED_SIO_UTILS_H
