@@ -36,7 +36,7 @@ int
 main(int argc, char** argv)
 {
   if (argc < 2) {
-    Printf("Usage: %s <SDTS CATD file>\n");
+    Printf("Usage: %s <SDTS CATD file>\n")(argv[0]);
     exit(1);
   }
 
