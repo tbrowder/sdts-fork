@@ -25,10 +25,6 @@
 #include <sdts++/io/sio_8211FieldFormat.h>
 #endif
 
-using std::string;
-using std::ostream;
-
-
 /// Simple utilities
 namespace  sio_Utils
 {
@@ -46,8 +42,8 @@ namespace  sio_Utils
    /**
       Just dumps out the binary converter map to the given output stream
    */
-   void dumpConverterDictionary( sio_8211_converter_dictionary const & cd,
-                                 ostream & os );
+   void dumpConverterDictionary(sio_8211_converter_dictionary const& cd,
+                                std::ostream& os);
 
   /// find a suitable, case insensitive filename
    bool find_file_case_insensitive(const std::string& orig_fname,
