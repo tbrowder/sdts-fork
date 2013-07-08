@@ -458,34 +458,33 @@ getModuleIterator_( sb_Accessor_Imp & accessor,
 
 
 bool
-sb_Accessor::get( sb_Module& module, sio_8211_converter_dictionary* cv )
+sb_Accessor::get(sb_Module& module, sio_8211_converter_dictionary* cv)
 {
-                                // first we find the iterator for the
-                                // given module
+  // first we find the iterator for the
+  // given module
 
-  sio_8211ForwardIterator curr_record_itr;
+  sio_8211ForwardIterator curr_record_itr; // in sio_Reader
+  if (!getModuleIterator_(*imp_, module.getMnemonic(),
+                          curr_record_itr,
+                          cv)) {
+    return false;
+  }
 
-  if ( ! getModuleIterator_( *imp_, module.getMnemonic(), 
-                             curr_record_itr,
-                             cv )  )
-    {
-      return false;
-    }                           // now interpret the content of the
-                                // current record by passing it to the
-                                // module; if the record is bogus in
-                                // some way, return false (e.g., an
-                                // IDEN record is passed to a sb_Catd
-                                // object
+  // now interpret the content of the
+  // current record by passing it to the
+  // module; if the record is bogus in
+  // some way, return false (e.g., an
+  // IDEN record is passed to a sb_Catd
+  // object
 
   sc_Record curr_record;
 
-  if ( curr_record_itr.done() || 
-       (! curr_record_itr.get( curr_record )) )
-    {
-      return false;
-    }
+  if (curr_record_itr.done() ||
+      (!curr_record_itr.get(curr_record))) {
+    return false;
+  }
 
-  return module.setRecord( curr_record );
+  return module.setRecord(curr_record);
 
 } // sb_Accessor::get
 
