@@ -5,9 +5,9 @@
 
 namespace fileutils
 {
-   std::string dirname( std::string const & path );
+   std::string dirname(std::string const& path);
 
-   std::string basename( std::string const & path );
+   std::string basename(std::string const& path);
 
 } // namespace fileutils
 
