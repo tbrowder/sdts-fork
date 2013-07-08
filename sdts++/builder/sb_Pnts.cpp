@@ -310,7 +310,7 @@ _ingest_record( sb_Pnts& pnts, sb_Pnts_Imp &pnts_imp, sc_Record const& record )
     }
   else
     {
-      // this is an optional filed, so no worries if we get here
+      // this is an optional field, so no worries if we get here
     }
 
 
@@ -321,7 +321,7 @@ _ingest_record( sb_Pnts& pnts, sb_Pnts_Imp &pnts_imp, sc_Record const& record )
       //grabbing fields until we get one that's well, not anLineID
       while ( curfield != record.end() && curfield->mnemonic() == "LNID" )
 	{
-	  
+
 	  pnts_imp._LineIDs.push_back( sb_ForeignID() );
 	  if ( ! pnts_imp._LineIDs.back().assign( *curfield ) )
 	    {
@@ -333,7 +333,7 @@ _ingest_record( sb_Pnts& pnts, sb_Pnts_Imp &pnts_imp, sc_Record const& record )
     }
   else
     {
-      // this is an optional filed, so no worries if we get here
+      // this is an optional field, so no worries if we get here
     }
 
 
@@ -356,7 +356,7 @@ _ingest_record( sb_Pnts& pnts, sb_Pnts_Imp &pnts_imp, sc_Record const& record )
     }
   else
     {
-      // this is an optional filed, so no worries if we get here
+      // this is an optional field, so no worries if we get here
     }
 
 
@@ -379,7 +379,7 @@ _ingest_record( sb_Pnts& pnts, sb_Pnts_Imp &pnts_imp, sc_Record const& record )
     }
   else
     {
-      // this is an optional filed, so no worries if we get here
+      // this is an optional field, so no worries if we get here
     }
 
 
@@ -390,7 +390,7 @@ _ingest_record( sb_Pnts& pnts, sb_Pnts_Imp &pnts_imp, sc_Record const& record )
       //grabbing fields until we get one that's well, not anRepresentationModuleID
       while ( curfield != record.end() && curfield->mnemonic() == "RPID" )
 	{
-	  
+
 	  pnts_imp._RepresentationModuleIDs.push_back( sb_ForeignID() );
 	  if ( ! pnts_imp._RepresentationModuleIDs.back().assign( *curfield ) )
 	    {
@@ -402,7 +402,7 @@ _ingest_record( sb_Pnts& pnts, sb_Pnts_Imp &pnts_imp, sc_Record const& record )
     }
   else
     {
-      // this is an optional filed, so no worries if we get here
+      // this is an optional field, so no worries if we get here
     }
 
 
@@ -425,7 +425,7 @@ _ingest_record( sb_Pnts& pnts, sb_Pnts_Imp &pnts_imp, sc_Record const& record )
     }
   else
     {
-      // this is an optional filed, so no worries if we get here
+      // this is an optional field, so no worries if we get here
     }
 
 
@@ -448,7 +448,7 @@ _ingest_record( sb_Pnts& pnts, sb_Pnts_Imp &pnts_imp, sc_Record const& record )
     }
   else
     {
-      // this is an optional filed, so no worries if we get here
+      // this is an optional field, so no worries if we get here
     }
 
 
@@ -459,19 +459,19 @@ _ingest_record( sb_Pnts& pnts, sb_Pnts_Imp &pnts_imp, sc_Record const& record )
       //grabbing fields until we get one that's well, not anArrtibuteLabel
       while ( curfield != record.end() && curfield->mnemonic() == "ATLB" )
 	{
-	  
+
 	  pnts_imp._ArrtibuteLabels.push_back( sb_AttributeID() );
 	  if ( ! pnts_imp._ArrtibuteLabels.back().assign( *curfield ) )
 	    {
 	      return false;
 	    }
-	  
+
 	  curfield++;
 	}
     }
   else
     {
-      // this is an optional filed, so no worries if we get here
+      // this is an optional field, so no worries if we get here
     }
 
 
