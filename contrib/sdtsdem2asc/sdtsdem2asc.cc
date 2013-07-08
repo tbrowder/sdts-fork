@@ -35,8 +35,12 @@ error(string const & message)
 int
 main(int argc, char** argv)
 {
+  if (argc < 2) {
+    Printf("Usage: %s <SDTS CATD file>\n");
+    exit(1)
+  }
 
-   // first get the spatial address of top left corner
+  // first get the spatial address of top left corner
    coordinate_t top_left_corner;
 
    sb_Accessor accessor(argv[1]);
@@ -48,15 +52,13 @@ main(int argc, char** argv)
    }
 
    rsdf_record.getSADR(top_left_corner.first,
-                        top_left_corner.second);
+                       top_left_corner.second);
 
    //     cout << "top left corner: "
    //          << top_left_corner.first << " "
    //          << top_left_corner.second << "\n";
 
    // then get the distance between postings in X and Y directions
-
-
    sb_Iref iref_record;
 
    if (!accessor.get(iref_record)) {
