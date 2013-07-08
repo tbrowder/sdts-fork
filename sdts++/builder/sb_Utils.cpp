@@ -635,11 +635,12 @@ addConvertersFromIREF_( string const & iref_filename,
 {
    // open the IREF module
 
-   ifstream iref_file( iref_filename.c_str() );
+   ifstream iref_file(iref_filename.c_str());
 
-   if ( ! iref_file )
-   {                            // try giving us a valid file next time, ok?
-      return false;
+   if (!iref_file) {
+     // try giving us a valid file next time, ok?
+     cerr << "ERROR:  Cannot find file '" << iref_filename << "'" << endl;
+     return false;
    }
 
    // Now grind through IREF records, calling addConverter() for @ one
@@ -653,9 +654,9 @@ addConvertersFromIREF_( string const & iref_filename,
 
    sc_Record record;            // current IREF record
 
-   sb_Iref   iref_module_record;
+   sb_Iref iref_module_record;
 
-   while ( i )
+   while (i)
    {
       i.get( record );
 
@@ -687,40 +688,38 @@ addConvertersFromDDSH_( string const & ddsh_filename,
 {
    // open the DDSH module
 
-   ifstream ddsh_file( ddsh_filename.c_str() );
+   ifstream ddsh_file(ddsh_filename.c_str());
 
-   if ( ! ddsh_file )
-   {                            // try giving us a valid file next time, ok?
-      return false;
+   if (!ddsh_file) {
+     // try giving us a valid file next time, ok?
+     cerr << "ERROR:  Cannot find file '" << ddsh_filename << "'" << endl;
+     return false;
    }
 
    // start grinding through the records; for each record call
    // addConverter()
 
-   sio_8211Reader reader( ddsh_file ); // DDSH module reader
+   sio_8211Reader reader(ddsh_file); // DDSH module reader
 
-   sio_8211ForwardIterator i( reader ); // used to grind through DDSH
+   sio_8211ForwardIterator i(reader); // used to grind through DDSH
 
    sc_Record record;            // current DDSH record
 
    sb_Ddsh   ddsh_module_record;
 
-   while ( i )
-   {
-      i.get( record );
+   while (i) {
+     i.get(record);
 
-      if ( ! ddsh_module_record.setRecord( record ) )
-      {
-         return false;          // unable to translate DDSH record, so leave
+      if (!ddsh_module_record.setRecord(record)) {
+        // unable to translate DDSH record, so leave
+        return false;
       }
 
-      if ( ! sb_Utils::addConverter( ddsh_module_record, dictionary ) )
-      {
-         return false;
+      if (!sb_Utils::addConverter(ddsh_module_record, dictionary)) {
+        return false;
       }
 
       ++i;
-
    } // grind to next DDSH module record
 
    return true;
@@ -728,35 +727,31 @@ addConvertersFromDDSH_( string const & ddsh_filename,
 } // addConvertersFromDDSH_
 
 
-
-
 bool
-sb_Utils::addConverters( string const & catd_filename,
-                         sio_8211_converter_dictionary & dictionary )
+sb_Utils::addConverters(string const & catd_filename,
+                        sio_8211_converter_dictionary& dictionary )
 {
 
-   // save the dir path because we'll need to prepend that to file
-   // names later
+  // save the dir path because we'll need to prepend that to file
+  // names later
+  string dir_path(fileutils::dirname(catd_filename));
 
-   string dir_path( fileutils::dirname( catd_filename ) );
+  dir_path += '/';
 
-   dir_path += '/';
+  // open the CATD module
+  ifstream catd_file(catd_filename.c_str());
 
-
-   // open the CATD module
-
-   ifstream catd_file( catd_filename.c_str() );
-
-   if ( ! catd_file )
-   {                            // try giving us a valid file next time, ok?
-      return false;
+   if (!catd_file) {
+     // try giving us a valid file next time, ok?
+     cerr << "ERROR:  Cannot find file '" << catd_filename << "'" << endl;
+     return false;
    }
 
    // start grinding through the records; for each IREF or DDSH hit,
    // open up _that_ module and start calling addConverter() for @
    // record
 
-   sio_8211Reader reader( catd_file ); // CATD module reader
+   sio_8211Reader reader(catd_file); // CATD module reader
 
    sio_8211ForwardIterator i( reader ); // used to grind through CATD
 

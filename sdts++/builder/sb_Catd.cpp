@@ -767,15 +767,16 @@ struct sb_Directory::Imp
 
  */
 bool
-sb_Directory::Imp::createDirectory( )
+sb_Directory::Imp::createDirectory()
 {
    // open the CATD module
 
-   ifstream catd_file( catd_filename.c_str() );
+   ifstream catd_file(catd_filename.c_str());
 
-   if ( ! catd_file )
-   {                            // try giving us a valid file next time, ok?
-      return false;
+   if (!catd_file) {
+     // try giving us a valid file next time, ok?
+     cerr << "ERROR:  Cannot find file '" << catd_filename << "'" << endl;
+     return false;
    }
 
    // start grinding through the CATD records
