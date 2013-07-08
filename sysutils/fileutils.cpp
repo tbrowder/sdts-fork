@@ -1,15 +1,10 @@
-//
-// $Id: fileutils.cpp,v 1.3 2001/03/25 21:54:11 mcoletti Exp $
-//
-
-
 #include "fileutils.h"
 
 
 using namespace std;
 
 /**
- find the last character -- if it's a '/', remove it be shrinking
+ find the last character -- if it's a '/', remove it by shrinking
  ``path'' by one
 */
 static
