@@ -1,3 +1,8 @@
+// version info
+#define sdts_VERSION_MAJOR @sdts_VERSION_MAJOR@
+#define sdts_VERSION_MINOR @sdts_VERSION_MINOR@
+#define sdts_VERSION_PATCH @sdts_VERSION_PATCH@
+
 // does the platform provide various functions and files?
 #cmakedefine HAVE_BASENAME
 #cmakedefine HAVE_FLOAT_H
