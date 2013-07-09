@@ -465,12 +465,9 @@ sb_Accessor::get(sb_Module& module, sio_8211_converter_dictionary* cv)
     return false;
   }
 
-  // now interpret the content of the
-  // current record by passing it to the
-  // module; if the record is bogus in
-  // some way, return false (e.g., an
-  // IDEN record is passed to a sb_Catd
-  // object
+  // now interpret the content of the current record by passing it to
+  // the module; if the record is bogus in some way, return false
+  // (e.g., an IDEN record is passed to a sb_Catd object
 
   sc_Record curr_record;
 
