@@ -4,6 +4,9 @@ project(sdts)
 # States that CMake required version must be greater than 2.6
 cmake_minimum_required(VERSION 2.8.11.1)
 
+# policy settings
+cmake_policy(SET CMP0007 OLD) # ignore empty lists
+
 # verbose messages
 #set(CMAKE_VERBOSE_MAKEFILE ON)
 
@@ -29,14 +32,17 @@ configure_file(
   "${PROJECT_SOURCE_DIR}/sdts++/sdts-config.h.in"
   "${PROJECT_BINARY_DIR}/sdts++/sdts-config.h"
 )
-
+configure_file(
+  "${PROJECT_SOURCE_DIR}/sdts++/sdts-config.h.in"
+  "${PROJECT_SOURCE_DIR}/sdts++/sdts-config.h"
+)
 
 # need this because of way files in subdirs call headers, e.g.,:
 #include <sdts++/io/sio_8211Converter.h>
 include_directories(.)
 
 # all these have own install targets:
-add_subdirectory(sysutils)
+#add_subdirectory(sysutils)
 add_subdirectory(sdts++)
 add_subdirectory(contrib)
 
