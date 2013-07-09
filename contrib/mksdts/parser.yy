@@ -31,18 +31,12 @@ using namespace std;
 #include <sdts++/container/sc_Record.h>
 #include <sdts++/container/sc_Field.h>
 #include <sdts++/container/sc_Subfield.h>
-
 #include <sdts++/io/sio_Writer.h>
 #include <sdts++/io/sio_8211Converter.h>
-
 #include <sdts++/builder/sb_Utils.h>
-
-
 
 int yylex();
 int yyerror( const char * s );
-
-
 
 extern int lineno;		// current line number in the source
 
@@ -55,9 +49,7 @@ string         outfile_name;    // the file name associated with that stream
 
 sio_8211Writer writer( outfile, "" );
 
-
 sc_Record record;		// SDTS output record
-
 
 sio_8211Schema::const_iterator field_format_itr; 
                                 // current field definition iterator
@@ -72,19 +64,15 @@ sio_8211Schema::const_iterator first_user_field_format_itr;
 sio_8211FieldFormat::const_iterator subfield_format_itr;
                                 // current subfield definition iterator
 
-
 string module_mnemonic;		// mnemonic for the module
 
 int    record_id = 1;           // current SDTS record number
-
 
 bool verbose = false;		// true if user wants copious output
 
 bool recIdenField = false;      // true if user wants record identfier fields
 
 string yylval_string;		// current string value
-
-
 
 sio_8211Converter_A     converter_A; // converters bound to subfields
 sio_8211Converter_I     converter_I;
@@ -101,11 +89,6 @@ sio_8211Converter_BUI32 converter_BUI32;
 sio_8211Converter_BFP32 converter_BFP32;
 sio_8211Converter_BFP64 converter_BFP64;
 
-
-
-
-
-
 // used to blat out noisy output if verbose true
 template <class T>
 void
@@ -120,8 +103,6 @@ echo_subfield_assignment( string const& label, T const & value )
 
 
 %}
-
-
 
 %union
 {
@@ -138,13 +119,9 @@ echo_subfield_assignment( string const& label, T const & value )
 %token BFP32 BFP64
 %token REGEXP DROP
 
-
 %start module_def
 
-
 %%
-
-
 
 module_def : MODULE ID 
              {
@@ -155,7 +132,6 @@ module_def : MODULE ID
              field_defs 
              {
 
-
 #ifdef SDTSXXDEBUG
 
                  cout << "\n" << __FILE__ << ":" << __LINE__ << "\n";
@@ -164,7 +140,6 @@ module_def : MODULE ID
 
                  copy( schema.begin(), schema.end(), ostr_it );
 #endif
-
 
                                 // We have to push the RCID and MODN
                                 // subfields in reverse order as the
