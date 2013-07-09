@@ -6,6 +6,11 @@ file(GLOB_RECURSE container_SOURCES "container/*.cpp")
 file(GLOB_RECURSE io_SOURCES        "io/*.cpp")
 file(GLOB_RECURSE logical_SOURCES   "logical/*.cpp")
 
+set(sysutils_SOURCES
+  "sysutils/fileutils.cpp"
+  "sysutils/stringutils.cpp"
+)
+
 # from:
 #   http://www.cmake.org/pipermail/cmake/2002-September/003028.html
 
@@ -63,6 +68,7 @@ add_library(sdts++ SHARED
   ${container_SOURCES}
   ${io_SOURCES}
   ${logical_SOURCES}
+  ${sysutils_SOURCES}
   ${Foo_SRCS}
 )
 
@@ -76,3 +82,11 @@ install(
     "${PROJECT_BINARY_DIR}/sdts++/sdts-config.h"
   DESTINATION "include/sdts++"
 )
+
+install(
+  FILES
+    "${PROJECT_SOURCE_DIR}/sdts++/sysutils/fileutils.h"
+    "${PROJECT_SOURCE_DIR}/sdts++/sysutils/stringutils.h"
+  DESTINATION "include/sdts++"
+)
+
