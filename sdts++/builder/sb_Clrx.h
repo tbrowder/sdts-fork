@@ -16,7 +16,7 @@
 #include <string>
 
 #include <sdts++/builder/sb_Module.h>
-#include <sdts++/xio/sio_8211FieldFormat.h>
+#include <sdts++/io/sio_8211FieldFormat.h>
 
 class  sb_ForeignID;
 class  sc_Record;
