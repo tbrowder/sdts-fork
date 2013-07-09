@@ -1,5 +1,8 @@
 # Project name is not mandatory, but you should use it
 project(sdts)
+set (sdts_VERSION_MAJOR 1)
+set (sdts_VERSION_MINOR 6)
+set (sdts_VERSION_PATCH 0)
 
 # States that CMake required version must be greater than 2.6
 cmake_minimum_required(VERSION 2.8.11.1)
@@ -38,8 +41,8 @@ endif()
 set(CMAKE_INSTALL_PREFIX "/usr/local")
 
 # need some defines and a config file
-include(CheckFunctionExists.cmake) # copied from /usr/local/share/cmake-2.8/Modules
-include(CheckIncludeFiles.cmake) # copied from /usr/local/share/cmake-2.8/Modules
+include(${CMAKE_ROOT}/Modules/CheckFunctionExists.cmake)
+include(${CMAKE_ROOT}/Modules/CheckIncludeFiles.cmake)
 
 check_function_exists(basename HAVE_BASENAME)
 check_include_files(float.h HAVE_FLOAT_H)
