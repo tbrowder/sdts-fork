@@ -21,35 +21,31 @@
 #include <sdts++/io/sio_8211DDRLeader.h>
 #include <sdts++/io/sio_8211Record.h>
 
-#ifdef WIN32
-using namespace std;
-#endif
-
 ///    This corresponds to an 8211 Data Definition Record (DDR)
 class sio_8211DDR : public sio_8211Record
 {
-   public:
+public:
 
-      ///
-      virtual sio_8211Leader const& getLeader() const;
+  ///
+  virtual sio_8211Leader const& getLeader() const;
 
-      ///
-      sio_8211DDR();
-
-
-   protected:
-
-      ///
-      virtual sio_8211Leader& getLeader_();
+  ///
+  sio_8211DDR();
 
 
-   private:
-      
-      ///
-      istream& streamExtract(istream& istr);
+protected:
 
-      ///
-      sio_8211DDRLeader leader_;
+  ///
+  virtual sio_8211Leader& getLeader_();
+
+
+private:
+
+  ///
+  std::istream& streamExtract(std::istream& istr);
+
+  ///
+  sio_8211DDRLeader leader_;
 
 }; // sio_8211DDR
 

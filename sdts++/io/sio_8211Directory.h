@@ -30,54 +30,53 @@ typedef std::list<sio_8211DirEntry> sio_8211DirEntryContainer;
 /// Defines container of 8211 directory entries.
 class sio_8211Directory : public sio_8211DirEntryContainer
 {
-   public:
+public:
 
-       ///
-      friend std::istream& operator>>(std::istream& istr, sio_8211Directory& dir);      
-      friend std::ostream& operator<<(ostream& ostr, sio_8211Directory const& dir);
-
-
-      ///
-      sio_8211Directory();
-
-      ///
-      sio_8211Directory(sio_8211Directory const& dir);
+  ///
+  friend std::istream& operator>>(std::istream& istr, sio_8211Directory& dir);
+  friend std::ostream& operator<<(std::ostream& ostr, sio_8211Directory const& dir);
 
 
-      /**
-       The leader is required to determine the widths of the various
-       subfields in a directory entry. Once the values are determined,
-       the leader is no longer required (may be deleted).
-       XXX synch comment with new sio_8211Leader reality
-      */
-      explicit sio_8211Directory(sio_8211Leader & leader);
+  ///
+  sio_8211Directory();
 
-      /// Does a 'deep copy' of the directory contents.
-      sio_8211Directory& operator=(sio_8211Directory const& rhs);
+  ///
+  sio_8211Directory(sio_8211Directory const& dir);
 
 
+  /**
+     The leader is required to determine the widths of the various
+     subfields in a directory entry. Once the values are determined,
+     the leader is no longer required (may be deleted).
+     XXX synch comment with new sio_8211Leader reality
+  */
+  explicit sio_8211Directory(sio_8211Leader & leader);
 
-      ///
-      void setLeader( sio_8211Leader & leader ) { leader_ = &leader; }
-
-   private:
-
-      /**
-         The leader, which is stored in the encompassing sio_8211Record,
-         contains formatting information used to read and write
-         directory entries writable because adding directory
-         entries might change the width values 
-      */
-      sio_8211Leader * leader_;
+  /// Does a 'deep copy' of the directory contents.
+  sio_8211Directory& operator=(sio_8211Directory const& rhs);
 
 
-}; // sio_8211Directory 
+
+  ///
+  void setLeader( sio_8211Leader & leader ) { leader_ = &leader; }
+
+private:
+
+  /**
+     The leader, which is stored in the encompassing sio_8211Record,
+     contains formatting information used to read and write
+     directory entries writable because adding directory
+     entries might change the width values
+  */
+  sio_8211Leader * leader_;
+
+}; // sio_8211Directory
 
 
 ///
 std::istream& operator>>(std::istream& istr, sio_8211Directory& dir);
 
 ///
-std::ostream& operator<<(ostream& ostr, sio_8211Directory const& dir);
+std::ostream& operator<<(std::ostream& ostr, sio_8211Directory const& dir);
 
 #endif  // INCLUDED_SIO_8211DIRECTORY_H

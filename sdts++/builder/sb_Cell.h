@@ -33,15 +33,13 @@
 #include <sdts++/io/sio_8211Converter.h>
 #include <sdts++/io/sio_8211FieldFormat.h>
 
-using namespace std;
-
 /**
  Strings and integers are initialized with these values; they are used
  to indicate whether a given module value has been assigned a value or not.
 
  (XXX I arbitrarily chose 0x4 as the sentinal value.  I hate ad hoc crap.)
 */
-const string  UNVALUED_STRING(1, static_cast<string::value_type>(0x4) );
+const std::string  UNVALUED_STRING(1, static_cast<std::string::value_type>(0x4) );
 
 const long    UNVALUED_LONG   = INT_MIN;
 
@@ -96,7 +94,7 @@ class sb_Cell : public sb_Module
        by the given back inserter
 
       */
-      bool loadData( back_insert_iterator<Container> & ) const;
+  bool loadData(std::back_insert_iterator<Container> & ) const;
                                 
 
 
@@ -205,7 +203,7 @@ sb_Cell<T>::sb_Cell( int index )
                                 // the mnemonic.
    std::strstream tmp_ss;
 
-   tmp_ss << "CEL" << index_ << ends;
+   tmp_ss << "CEL" << index_ << std::ends;
 
    std::string tmp_string;
 
@@ -461,7 +459,7 @@ sb_Cell<T>::unDefineColI( )
 ///
 template <class T>
 bool
-sb_Cell<T>::loadData( back_insert_iterator<T> & bi ) const
+sb_Cell<T>::loadData(std::back_insert_iterator<T> & bi ) const
 {
                                 // load up all the elevation values
 

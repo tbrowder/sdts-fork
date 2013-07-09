@@ -16,6 +16,8 @@
 
 #include <sdts++/io/sio_8211Leader.h>
 
+using namespace std;
+
 sio_8211Leader::sio_8211Leader()
               : recLength_(0),
                 fieldAreaStart_(0),

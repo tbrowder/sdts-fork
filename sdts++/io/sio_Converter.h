@@ -16,8 +16,6 @@
 
 #include <sdts++/io/sio_Buffer.h>
 
-using namespace std;
-
 class sc_Subfield;
 
 ///

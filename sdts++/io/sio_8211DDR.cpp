@@ -24,6 +24,8 @@
 #include <sdts++/io/sio_8211DirEntry.h>
 #include <sdts++/io/sio_8211Directory.h>
 
+using namespace std;
+
 sio_8211DDR::sio_8211DDR()
 {
    getDirectory_().setLeader( leader_ );

@@ -19,98 +19,96 @@
 #include <iostream>
 #include <iomanip>
 
-using std::istream;
-using std::ostream;
-
-
 /// An ISO8211 Record Leader.
 class sio_8211Leader  
 {
-   public:
+public:
 
-      ///
-      sio_8211Leader();
+  ///
+  sio_8211Leader();
 
-      ///
-      virtual ~sio_8211Leader();
+  ///
+  virtual ~sio_8211Leader();
 
-      ///
-      long getRecordLength() const;
+  ///
+  long getRecordLength() const;
 
-      ///
-      void setRecordLength(long length);
+  ///
+  void setRecordLength(long length);
 
-      ///
-      char getLeaderIdentifier() const;
+  ///
+  char getLeaderIdentifier() const;
 
-      ///
-      void setLeaderIdentifier(char identifier);
+  ///
+  void setLeaderIdentifier(char identifier);
 
-      ///
-      long getBaseAddrOfFieldArea() const;
+  ///
+  long getBaseAddrOfFieldArea() const;
 
-      ///
-      void setBaseAddrOfFieldArea(long base);
+  ///
+  void setBaseAddrOfFieldArea(long base);
 
-      ///
-      long getSizeOfFieldLengthField() const;
+  ///
+  long getSizeOfFieldLengthField() const;
 
-      ///
-      void setSizeOfFieldLengthField(long size);
+  ///
+  void setSizeOfFieldLengthField(long size);
 
-      ///
-      long getSizeOfFieldPosField() const;
+  ///
+  long getSizeOfFieldPosField() const;
 
-      ///
-      void setSizeOfFieldPosField(long size);
+  ///
+  void setSizeOfFieldPosField(long size);
 
-      ///
-      long getSizeOfFieldTagField() const;
+  ///
+  long getSizeOfFieldTagField() const;
 
-      ///
-      void setSizeOfFieldTagField(long size);
+  ///
+  void setSizeOfFieldTagField(long size);
 
-      friend istream& operator>>(istream& istr, sio_8211Leader& leader);
-      friend ostream& operator<<(ostream& ostr, sio_8211Leader const& leader);
+  friend std::istream& operator>>(std::istream& istr,
+                                  sio_8211Leader& leader);
+  friend std::ostream& operator<<(std::ostream& ostr,
+                                  sio_8211Leader const& leader);
 
-   protected:
+protected:
 
-      ///
-      virtual bool isValid() const;
+  ///
+  virtual bool isValid() const;
 
-      ///
-      long recLength_;
+  ///
+  long recLength_;
 
-      ///
-      char leaderIden_;
+  ///
+  char leaderIden_;
 
-      ///
-      long fieldAreaStart_;
+  ///
+  long fieldAreaStart_;
 
-      ///
-      long sizeFieldLength_;
+  ///
+  long sizeFieldLength_;
 
-      ///
-      long sizeFieldPos_;
+  ///
+  long sizeFieldPos_;
 
-      ///
-      long sizeFieldTag_;
+  ///
+  long sizeFieldTag_;
 
-      virtual istream& streamExtract(istream& istr) = 0;
-      virtual ostream& streamInsert(ostream& ostr) const = 0; 
+  virtual std::istream& streamExtract(std::istream& istr) = 0;
+  virtual std::ostream& streamInsert(std::ostream& ostr) const = 0;
 
 };  // class sio_8211Leader
 
 
 
 ///
-istream&
-operator>>(istream& istr, sio_8211Leader& leader);
+std::istream&
+operator>>(std::istream& istr, sio_8211Leader& leader);
 
 
 ///
-ostream&
-operator<<(ostream& ostr, sio_8211Leader const& leader);
+std::ostream&
+operator<<(std::ostream& ostr, sio_8211Leader const& leader);
 
 
 #endif // INCLUDED_SIO_8211LEADER_H
