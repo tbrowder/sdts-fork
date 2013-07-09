@@ -1,7 +1,3 @@
-//
-// $Id: prsdts.cpp,v 1.7 2002/11/27 00:21:33 mcoletti Exp $
-//
-
 #include <iostream>
 #include <fstream>
 
@@ -16,11 +12,6 @@
 #endif
 #endif
 
-
-using namespace std;
-
-
-
 // stooopid IRIX has non-standard getopt() behavior; it returns -1
 // instead of EOF when the last command line argument is processed
 
@@ -33,17 +24,12 @@ const int GETOPTDONE = EOF;
 
 #include <sdts++/io/sio_Reader.h>
 #include <sdts++/io/sio_ConverterFactory.h>
-
 #include <sdts++/container/sc_Record.h>
 
+using namespace std;
 
 bool totals = false;		// true if user just wants to see how many
                                 // records there are in the given module
-
-
-
-
-
 
 void
 usage( const char * name )

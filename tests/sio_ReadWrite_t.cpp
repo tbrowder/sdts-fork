@@ -2,8 +2,6 @@
 // sio_ReadWrite.cpp
 //
 
-
-
 // stooopid IRIX has non-standard getopt() behavior; it returns -1
 // instead of EOF when the last command line argument is processed
 #ifdef _SGIAPI
@@ -21,39 +19,23 @@
     const int GETOPTDONE = EOF;
 #endif
 
-
-
 #include <iostream>
 #include <fstream>
 #include <algorithm>
 
-
 #include <sdts++/io/sio_Reader.h>
 #include <sdts++/io/sio_Writer.h>
 #include <sdts++/io/sio_ConverterFactory.h>
-
-
-
 #include <sdts++/container/sc_Record.h>
 #include <sdts++/container/sc_Field.h>
 #include <sdts++/container/sc_Subfield.h>
 
-
 using namespace std;
-
-
-static const char* _ident = "$Id: sio_ReadWrite_t.cpp,v 1.11 2002/11/27 00:21:34 mcoletti Exp $";
-
-
-
 
 bool verbose     = false;       // true if user wants noisy output
 
 bool record_iden = false;       // true if user wants an 8211 record
                                 // identifier field emitted with each DR
-
-
-
 
 void
 usage( const char * name )

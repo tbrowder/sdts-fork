@@ -10,14 +10,9 @@
 // including points of contact.
 //
 
-// $Id: sc_MultiTypeValue.cpp,v 1.5 2002/11/24 22:07:43 mcoletti Exp $
-
-
 #include <sdts++/container/sc_MultiTypeValue.h>
 
-
 using namespace std;
-
 
 sc_MultiTypeValue::sc_MultiTypeValue()
   : type_( isNull )

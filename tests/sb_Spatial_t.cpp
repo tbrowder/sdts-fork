@@ -1,7 +1,3 @@
-//
-// $Id: sb_Spatial_t.cpp,v 1.2 2000/08/08 23:08:45 mcoletti Exp $
-//
-
 #include <cassert>
 #include <iostream>
 #include <fstream>
@@ -11,10 +7,6 @@
 #include <sdts++/builder/sb_Spatial.h>
 
 using namespace std;
-
-
-
-
 
 int
 main( int argc, char** argv )

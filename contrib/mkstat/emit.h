@@ -1,8 +1,6 @@
 //
 // emit.h
 //
-// $Id: emit.h,v 1.2 2003/02/13 23:37:46 mcoletti Exp $
-//
 
 #ifndef EMIT_H
 #define EMIT_H

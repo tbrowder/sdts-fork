@@ -27,8 +27,6 @@
 #ifndef LOKI_TYPELIST_INC_
 #define LOKI_TYPELIST_INC_
 
-// $Id$
-
 // TB: localize from <loki/*.h> to "*.h"
 #include "NullType.h"
 #include "TypeManip.h"

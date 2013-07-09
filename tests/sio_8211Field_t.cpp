@@ -1,8 +1,6 @@
 //
 // sio_8211Field_t.cpp
 //
-// $Id: sio_8211Field_t.cpp,v 1.7 2002/11/27 00:21:34 mcoletti Exp $
-//
 
 #include <cassert>
 #include <memory.h>
@@ -11,15 +9,13 @@
 #include <string>
 #include <algorithm>
 
-
-using namespace std;
-
-
 #include <sdts++/io/sio_8211DirEntry.h>
 #include <sdts++/io/sio_8211Field.h>
 #include <sdts++/io/sio_8211DDRLeader.h>
 #include <sdts++/io/sio_8211Utils.h>
 #include <sdts++/io/sio_Buffer.h>
+
+using namespace std;
 
 int 
 main( int argc, char** argv )

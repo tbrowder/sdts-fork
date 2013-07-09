@@ -24,9 +24,6 @@
 #ifndef LOKI_SEQUENCE_INC_
 #define LOKI_SEQUENCE_INC_
 
-// $Id$
-
-
 // TB: localize from <loki/*.h> to "*.h"
 #include "Typelist.h"
 

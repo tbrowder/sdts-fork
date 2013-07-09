@@ -24,9 +24,6 @@
 #ifndef LOKI_LOKIEXPORT_INC_
 #define LOKI_LOKIEXPORT_INC_
 
-// $Id: LokiExport.h 1115 2011-09-23 00:46:21Z rich_sposato $
-
-
 #ifdef __GNUC__
 
 #ifdef _HAVE_GCC_VISIBILITY

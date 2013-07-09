@@ -2,8 +2,6 @@
 // filename.cc
 //
 
-#include "filename.h"
-
 #include <algorithm>
 #include <iostream>
 #include <cctype>
@@ -12,13 +10,12 @@
 #include <sys/types.h>
 #include <sys/stat.h>
 
-static const char* _ident = "$Id: filename.cpp,v 1.1 1999/02/11 22:08:44 mcoletti Exp $";
+#include "filename.h"
 
+using namespace std;
 
 extern bool verbose;
 extern bool force_lowercase;
-
-using namespace std;
 
 inline
 static

@@ -1,23 +1,15 @@
-//
-// $Id: sb_iref_t.cpp,v 1.1 1999/03/11 22:32:54 mcoletti Exp $
-//
-
-
 #include <iostream>
 #include <fstream>
-
-using namespace std;
 
 #include <sdts++/io/sio_8211Converter.h>
 #include <sdts++/io/sio_Reader.h>
 #include <sdts++/container/sc_Record.h>
 #include <sdts++/builder/sb_Iref.h>
 
-
+using namespace std;
 
 // binary 32 bit integer converter function
 sio_8211Converter_BI32  bi32_converter;
-
 
 int
 main( int argc, char** argv )

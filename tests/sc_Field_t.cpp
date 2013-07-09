@@ -1,8 +1,6 @@
 //
 // sc_Field_t.cpp
 //
-// $Id: sc_Field_t.cpp,v 1.6 2002/11/27 00:21:34 mcoletti Exp $
-//
 // TODO:
 //
 //   We should add checks for _all_ get*() and set*() members, not just a

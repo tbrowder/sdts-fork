@@ -1,13 +1,6 @@
-//
-// $Id: stringutils.cpp,v 1.1 2001/07/17 20:50:15 mcoletti Exp $
-//
-//
-
 #include "stringutils.h"
 
-
 using namespace std;
-
 
 size_t
 stringutils::chomp( string & s )

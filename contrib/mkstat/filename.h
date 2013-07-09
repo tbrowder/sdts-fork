@@ -1,8 +1,6 @@
 //
 // filename.h
 //
-// $Id: filename.h,v 1.2 2003/02/13 23:37:46 mcoletti Exp $
-//
 
 #include <string>
 

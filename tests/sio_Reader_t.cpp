@@ -1,11 +1,6 @@
-//
-// $Id: sio_Reader_t.cpp,v 1.3 2002/11/27 00:21:34 mcoletti Exp $
-//
-
 #include <iostream>
 #include <fstream>
 #include <cstdlib>
-
 
 #ifdef _MSC_VER
 #include "../../Windows/getopt.h"
@@ -16,10 +11,7 @@
 #endif
 #endif
 
-
 using namespace std;
-
-
 
 // stooopid IRIX has non-standard getopt() behavior; it returns -1
 // instead of EOF when the last command line argument is processed

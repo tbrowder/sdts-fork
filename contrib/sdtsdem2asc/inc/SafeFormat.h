@@ -24,9 +24,6 @@
 #ifndef LOKI_SAFEFORMAT_INC_
 #define LOKI_SAFEFORMAT_INC_
 
-// $Id$
-
-
 ////////////////////////////////////////////////////////////////////////////////
 // This file contains definitions for SafePrintf. SafeScanf coming soon (the
 //   design is similar).

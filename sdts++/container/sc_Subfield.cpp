@@ -9,20 +9,8 @@
 // web site at http://mcmcweb.er.usgs.gov/sdts for more information,
 // including points of contact.
 //
-//
-// $Id: sc_Subfield.cpp,v 1.8 2002/11/24 22:07:43 mcoletti Exp $
-//
-
-//#ifndef INCLUDED_CONVERSIONS_HXX
-//#include "container/conversions.h"
-//#endif
 
 #include <sdts++/container/sc_Subfield.h>
-
-
-static const char* const iden_ = "$Id: sc_Subfield.cpp,v 1.8 2002/11/24 22:07:43 mcoletti Exp $";
-
-
 
 using namespace std;
 

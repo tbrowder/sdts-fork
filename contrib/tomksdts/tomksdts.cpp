@@ -1,16 +1,12 @@
 //
 // tomakedts.cpp
 //
-// $Id: tomksdts.cpp,v 1.3 2003/02/13 23:37:46 mcoletti Exp $
-//
 
 
 #include <unistd.h>
-
 #include <fstream>
 #include <iostream>
 #include <string>
-
 #include <cstdlib> // for exit function
 
 #include "convert.h"

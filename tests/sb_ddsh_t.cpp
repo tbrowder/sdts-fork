@@ -9,8 +9,6 @@
 // web site at http://mcmcweb.er.usgs.gov/sdts for more information,
 // including points of contact.
 //
-// $Id: sb_ddsh_t.cpp,v 1.3 2002/11/27 00:21:34 mcoletti Exp $
-//
 
 
 #include <iostream>

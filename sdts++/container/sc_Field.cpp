@@ -17,17 +17,12 @@
 #pragma warning( disable : 4786 )
 #endif
 
-#include <sdts++/container/sc_Field.h>
-
 #include <iterator>
 #include <algorithm>
 
+#include <sdts++/container/sc_Field.h>
 
 using namespace std;
-
-
-static const char* ident_ = "$Id: sc_Field.cpp,v 1.5 2002/11/24 22:07:43 mcoletti Exp $";
-
 
 sc_Field::sc_Field( string const& name, string const& mnemonic )
   : mnemonic_( mnemonic ), name_( name )

@@ -1,9 +1,3 @@
-//
-// $Id: emit.cpp,v 1.1 1999/02/11 22:08:44 mcoletti Exp $
-//
-
-#include "emit.h"
-
 #include <iostream>
 #include <cstdlib> // for exit
 
@@ -11,9 +5,7 @@
 #include <sdts++/io/sio_Writer.h>
 #include <sdts++/builder/sb_Module.h>
 
-
-static const char* _ident = "$Id: emit.cpp,v 1.1 1999/02/11 22:08:44 mcoletti Exp $";
-
+#include "emit.h"
 
 extern bool verbose;
 

@@ -13,18 +13,10 @@
 #include <algorithm>
 #include <functional>
 
-using namespace std;
-
-
 #include <sdts++/container/sc_Record.h>
 #include <sdts++/io/sio_Reader.h>
 
-
-
-static const char * const ident_ = 
-    "$Id: convert.cpp,v 1.3 2001/05/18 23:08:36 mcoletti Exp $";
-
-
+using namespace std;
 
 static
 void

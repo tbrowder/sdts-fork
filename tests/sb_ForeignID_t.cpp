@@ -1,7 +1,3 @@
-//
-// $Id: sb_ForeignID_t.cpp,v 1.4 2000/08/08 21:17:35 mcoletti Exp $
-//
-
 #include <cassert>
 #include <iostream>
 #include <fstream>
@@ -11,7 +7,6 @@
 #include <sdts++/builder/sb_ForeignID.h>
 
 using namespace std;
-
 
 void
 testUsageModifier( sb_ForeignID & frid, sb_ForeignID::usage_t ut )

@@ -1,16 +1,11 @@
-//
-// $Id: t_stringutils.cpp,v 1.1 2001/07/17 20:50:15 mcoletti Exp $
-//
-
 #include <iostream>
 #include <string>
 #include <cassert>
 #include <cstdlib>
 
-using namespace std;
-
 #include "stringutils.h"
 
+using namespace std;
 
 int
 main( int argc, char** argv )

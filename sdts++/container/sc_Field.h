@@ -11,8 +11,6 @@
 //
 // sc_Field.h: interface for the sc_Field class.
 //
-// $Id: sc_Field.h,v 1.9 2003/01/03 20:41:05 mcoletti Exp $
-//
 
 #ifndef INCLUDED_SC_FIELD_H
 #define INCLUDED_SC_FIELD_H

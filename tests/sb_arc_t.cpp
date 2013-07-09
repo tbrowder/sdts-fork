@@ -1,7 +1,3 @@
-//
-// $Id: sb_arc_t.cpp,v 1.2 2002/10/11 19:55:50 mcoletti Exp $
-//
-
 #include <iostream>
 #include <fstream>
 
@@ -15,7 +11,7 @@ using namespace std;
 int
 main( int argc, char** argv )
 {
-    
+
   cout << "this module isn't supported by sdts++ yet\n";
 
 #ifdef NOP

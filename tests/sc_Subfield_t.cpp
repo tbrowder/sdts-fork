@@ -1,8 +1,6 @@
 //
 // sc_Subfield_t.cpp
 //
-// $Id: sc_Subfield_t.cpp,v 1.10 2003/06/10 17:50:56 mcoletti Exp $
-//
 
 #include <cassert>
 #include <iostream>
@@ -10,11 +8,11 @@
 #include <climits>
 #include <cstdlib> // exit
 
-#include <sdts++/sdts-config.h>
-
 #ifdef _MSC_VER
 #define HAVE_FLOAT_H
 #endif
+
+#include <sdts++/sdts-config.h>
 
 #ifdef HAVE_FLOAT_H
 #include <float.h>
@@ -26,8 +24,6 @@ using namespace std;
 
 const double MIN_DBL_DISTANCE = DBL_MIN * 2;
 const double MIN_FLT_DISTANCE = FLT_MIN * 2;
-
-
 
 bool
 equal( double const& l, double const& r )

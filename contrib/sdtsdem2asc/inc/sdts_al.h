@@ -1,5 +1,4 @@
 /******************************************************************************
- * $Id: sdts_al.h 25839 2013-04-02 18:54:20Z rouault $
  *
  * Project:  SDTS Translator
  * Purpose:  Include file for entire SDTS Abstraction Layer functions.

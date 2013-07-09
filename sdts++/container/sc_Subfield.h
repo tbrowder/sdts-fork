@@ -9,9 +9,6 @@
 // web site at http://mcmcweb.er.usgs.gov/sdts for more information,
 // including points of contact.
 //
-//
-// $Id: sc_Subfield.h,v 1.10 2003/01/03 20:41:05 mcoletti Exp $
-//
 
 #ifndef INCLUDED_SCSUBFIELD_HXX
 #define INCLUDED_SCSUBFIELD_HXX

@@ -1,22 +1,15 @@
-// 
-// $Id: sb_iden_t.cpp,v 1.2 2002/10/10 20:35:25 mcoletti Exp $
-//
-
-
 #include <iostream>
 #include <fstream>
-using namespace std;
 
 #include <sdts++/builder/sb_Iden.h>
 #include <sdts++/io/sio_8211Converter.h>
 #include <sdts++/io/sio_Reader.h>
 #include <sdts++/container/sc_Record.h>
 
+using namespace std;
 
 // binary 32 bit integer converter function
 sio_8211Converter_BI32  bi32_converter;
-
-
 
 const char* iden_str = "Standard Idenification";
 const char* version = "Standard Version";
@@ -41,8 +34,6 @@ const long coding_level = 1;
 const char* non_geo_dimension = "N";
 const char* module_name = "FOON";
 const long record_id = 23;
-
-
 
 int
 main( int argc, char** argv )

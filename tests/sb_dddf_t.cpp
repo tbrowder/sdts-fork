@@ -9,23 +9,18 @@
 // web site at http://mcmcweb.er.usgs.gov/sdts for more information,
 // including points of contact.
 //
-// $Id: sb_dddf_t.cpp,v 1.3 2002/11/27 00:21:34 mcoletti Exp $
-//
 
 
 #include <iostream>
 #include <fstream>
-
-
-using namespace std;
-
-
 #include <cassert>
 
 #include <sdts++/io/sio_8211Converter.h>
 #include <sdts++/io/sio_Reader.h>
 #include <sdts++/container/sc_Record.h>
 #include <sdts++/builder/sb_Dddf.h>
+
+using namespace std;
 
 
 int

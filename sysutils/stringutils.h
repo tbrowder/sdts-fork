@@ -1,8 +1,3 @@
-//
-// $Id: stringutils.h,v 1.1 2001/07/17 20:50:15 mcoletti Exp $
-//
-//
-
 #ifndef STRINGUTILS_H
 #define STRINGUTILS_H
 

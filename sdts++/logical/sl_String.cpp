@@ -8,18 +8,10 @@
 // no committment to any level of support for this code.  See the SDTS
 // web site at http://mcmcweb.er.usgs.gov/sdts for more information,
 // including points of contact.
-//
-// $Id: sl_String.cpp,v 1.2 2002/11/24 22:07:44 mcoletti Exp $
 
 #include <sdts++/logical/sl_String.h>
 
-
-static const char* ident_ = 
-  "$Id: sl_String.cpp,v 1.2 2002/11/24 22:07:44 mcoletti Exp $";
-
-
 using namespace std;
-
 
 //
 // sl_String

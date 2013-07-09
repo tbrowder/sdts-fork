@@ -9,8 +9,6 @@
 // web site at http://mcmcweb.er.usgs.gov/sdts for more information,
 // including points of contact.
 //
-// $Id: sb_Poly.h,v 1.3 2002/11/24 22:07:42 mcoletti Exp $
-//
 #ifndef INCLUDED_SB_POLY_H
 #define INCLUDED_SB_POLY_H
 

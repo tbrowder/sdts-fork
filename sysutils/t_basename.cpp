@@ -1,7 +1,3 @@
-//
-// $Id: t_basename.cpp,v 1.2 2002/11/27 00:21:34 mcoletti Exp $
-//
-
 #include <iostream>
 #include <cstdlib>
 

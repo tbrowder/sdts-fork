@@ -27,9 +27,6 @@
 #ifndef LOKI_TYPEMANIP_INC_
 #define LOKI_TYPEMANIP_INC_
 
-// $Id: TypeManip.h 1115 2011-09-23 00:46:21Z rich_sposato $
-
-
 namespace Loki
 {
 ////////////////////////////////////////////////////////////////////////////////

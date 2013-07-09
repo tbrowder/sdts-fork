@@ -1,6 +1,4 @@
 //
-// $Id: mkstat.cpp,v 1.5 2003/02/13 23:37:46 mcoletti Exp $
-//
 // Utility for creating a STAT module from the contents of an existing
 // CATD module.
 //
@@ -8,17 +6,12 @@
 #include <iostream>
 #include <fstream>
 #include <strstream>
-
 #include <algorithm>
-
 #include <cstdlib>
+
 #ifdef HAVE_UNISTD_H
 #include <unistd.h>
 #endif
-
-using namespace std;
-
-#include "sysutils/fileutils.h"
 
 // stooopid IRIX has non-standard getopt() behavior; it returns -1
 // instead of EOF when the last command line argument is processed
@@ -29,8 +22,6 @@ using namespace std;
 const int GETOPTDONE = EOF;
 #endif
 
-
-
 #include <sdts++/container/sc_Record.h>
 #include <sdts++/io/sio_8211Converter.h>
 #include <sdts++/io/sio_Writer.h>
@@ -39,19 +30,13 @@ const int GETOPTDONE = EOF;
 #include <sdts++/builder/sb_Stat.h>
 #include <sdts++/builder/sb_Catd.h>
 
-
+#include "sysutils/fileutils.h"
 #include "emit.h"
 
-
-static const char* _ident = 
-   "$Id: mkstat.cpp,v 1.5 2003/02/13 23:37:46 mcoletti Exp $";
-
-
+using namespace std;
 
 bool verbose;                   // true if user wants noisy output
 bool force_lowercase;           // XXX Kludge!  This doesn't need it!
-
-
 
 void
 usage( const char* executable )

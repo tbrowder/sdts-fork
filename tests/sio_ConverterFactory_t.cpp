@@ -1,9 +1,3 @@
-/**
-
-$Id: sio_ConverterFactory_t.cpp,v 1.1 2001/02/07 19:12:46 mcoletti Exp $
-
-*/
-
 #include <iostream>
 #include <cassert>
 #include <cstdlib> // exit

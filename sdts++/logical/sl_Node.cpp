@@ -8,16 +8,8 @@
 // no committment to any level of support for this code.  See the SDTS
 // web site at http://mcmcweb.er.usgs.gov/sdts for more information,
 // including points of contact.
-//
-// $Id: sl_Node.cpp,v 1.1 2000/04/28 18:25:50 mcoletti Exp $
 
 #include <sdts++/logical/sl_Node.h>
-
-
-static const char* ident_ = 
-  "$Id: sl_Node.cpp,v 1.1 2000/04/28 18:25:50 mcoletti Exp $";
-
-
 
 //
 // sl_PlanarNode
