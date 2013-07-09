@@ -740,11 +740,10 @@ sb_Utils::addConverters(string const & catd_filename,
 
   // open the CATD module
   ifstream catd_file(catd_filename.c_str());
-
-   if (!catd_file) {
-     // try giving us a valid file next time, ok?
-     cerr << "ERROR:  Cannot find file '" << catd_filename << "'" << endl;
-     return false;
+  if (!catd_file) {
+    // try giving us a valid file next time, ok?
+    cerr << "ERROR:  Cannot find file '" << catd_filename << "'" << endl;
+    return false;
    }
 
    // start grinding through the records; for each IREF or DDSH hit,
@@ -753,55 +752,50 @@ sb_Utils::addConverters(string const & catd_filename,
 
    sio_8211Reader reader(catd_file); // CATD module reader
 
-   sio_8211ForwardIterator i( reader ); // used to grind through CATD
+   sio_8211ForwardIterator i(reader); // used to grind through CATD
 
-   sc_Record record;            // current CATD record
+   sc_Record record; // current CATD record
 
-   string catd_name;            // CATD::NAME values
+   string catd_name; // CATD::NAME values
 
    sb_Catd catd_module_record;
 
-   string file_name;            // file name for IREF or DDSH module
+   string file_name; // file name for IREF or DDSH module
 
-   while ( i )
-   {
-      i.get( record );
+   while (i) {
+      i.get(record);
 
-      if ( ! catd_module_record.setRecord( record ) )
-      {
-         return false;          // we have a non CATD module, so bail
+      if (!catd_module_record.setRecord(record)) {
+        // we have a non CATD module, so bail
+        return false;
       }
 
-      if ( ! catd_module_record.getNAME( catd_name ) )
-      {
-         return false;          // if we can't get CATD::NAME, something's
-                                // seriously wrong because ALL CATD modules
-                                // have this subfield
+      if (!catd_module_record.getNAME(catd_name)) {
+        // if we can't get CATD::NAME, something's seriously wrong
+        // because ALL CATD modules have this subfield
+        return false;
       }
 
-      if ( ! catd_module_record.getFILE( file_name ) )
-      {
-         return false;          // dittor for CATD::FILE
+      if (!catd_module_record.getFILE(file_name)) {
+        // ditto for CATD::FILE
+        return false;
       }
 
-      string full_path_name;    // fully qualified file name; needed because
-                                // these module may not be in $CWD
+      // fully qualified file name; needed because these modules may
+      // not be in $CWD
+      string full_path_name;
 
       full_path_name = dir_path + file_name;
 
-      if ( "IREF" == catd_name )
-      {
-         if ( ! addConvertersFromIREF_( full_path_name, dictionary ) )
-         {
-            return false;
-         }
+      if ("IREF" == catd_name) {
+        if (!addConvertersFromIREF_(full_path_name, dictionary)) {
+          return false;
+        }
       }
-      else if  ( "DDSH" == catd_name )
-      {
-         if ( ! addConvertersFromDDSH_( full_path_name, dictionary ) )
-         {
-            return false;
-         }
+      else if ("DDSH" == catd_name) {
+        if (!addConvertersFromDDSH_(full_path_name, dictionary)) {
+          return false;
+        }
       }
 
       ++i;
