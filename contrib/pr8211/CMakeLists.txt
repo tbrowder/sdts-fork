@@ -4,6 +4,7 @@ add_executable(pr8211
 
 target_link_libraries(pr8211
   boost_system
+  boost_filesystem
   sdts++
   sysutils
 )

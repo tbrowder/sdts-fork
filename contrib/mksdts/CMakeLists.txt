@@ -49,8 +49,9 @@ INCLUDE_DIRECTORIES(${Foo2_BINARY_DIR})
 add_executable(mksdts ${Foo2_SRCS})
 
 target_link_libraries(mksdts
-  boost_system
   sdts++
+  boost_system
+  boost_filesystem
   fl
   sysutils
 )

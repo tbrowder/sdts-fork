@@ -4,6 +4,7 @@ add_executable(sdtsdem2xyz
 
 target_link_libraries(sdtsdem2xyz
   boost_system
+  boost_filesystem
   sdts++
   sysutils
 )

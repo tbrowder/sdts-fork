@@ -4,6 +4,7 @@ add_executable(prsdts
 
 target_link_libraries(prsdts
   boost_system
+  boost_filesystem
   sdts++
   fl
   sysutils

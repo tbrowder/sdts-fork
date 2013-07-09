@@ -6,6 +6,7 @@ add_executable(mkstat
 
 target_link_libraries(mkstat
   boost_system
+  boost_filesystem
   sdts++
   sysutils
 )
