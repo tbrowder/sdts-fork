@@ -19,6 +19,21 @@ set(CMAKE_MODULE_PATH ${sdts_SOURCE_DIR}/cmake/modules ${CMAKE_MODULE_PATH})
 
 #macro_ensure_out_of_source_build("${PROJECT_NAME} requires an out of source build.")
 
+# prereqs
+find_package(Boost REQUIRED
+  COMPONENTS system filesystem
+)
+if(Boost_FOUND)
+ include_directories(${Boost_INCLUDE_DIRS})
+else()
+  message(FATAL_ERROR
+    "FATAL ERROR: Required Boost libraries not found:\n"
+    "  libboost_system\n"
+    "  libboost_filesystem"
+  )
+endif()
+
+
 # where to install?
 set(CMAKE_INSTALL_PREFIX "/usr/local")
 
@@ -32,10 +47,7 @@ configure_file(
   "${PROJECT_SOURCE_DIR}/sdts++/sdts-config.h.in"
   "${PROJECT_BINARY_DIR}/sdts++/sdts-config.h"
 )
-configure_file(
-  "${PROJECT_SOURCE_DIR}/sdts++/sdts-config.h.in"
-  "${PROJECT_SOURCE_DIR}/sdts++/sdts-config.h"
-)
+include_directories("${PROJECT_BINARY_DIR}")
 
 # need this because of way files in subdirs call headers, e.g.,:
 #include <sdts++/io/sio_8211Converter.h>
