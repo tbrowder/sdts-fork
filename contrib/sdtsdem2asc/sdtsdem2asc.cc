@@ -45,7 +45,7 @@ main(int argc, char** argv)
   // first get the spatial address of top left corner
    coordinate_t top_left_corner;
 
-   sb_Accessor accessor(argv[1]);
+   sb_Accessor accessor(ifil);
 
    sb_Rsdf rsdf_record;
 
