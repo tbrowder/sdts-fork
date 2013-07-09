@@ -26,23 +26,10 @@
 #include <netinet/in.h>
 #endif
 
-#ifndef INCLUDED_SIO_CONVERTER_H
-#include <sdts++/io/sio_Converter.h>
-#endif
-
-#ifndef INCLUDED_SIO_8211UTILS_H
-#include <sdts++/io/sio_8211Utils.h>
-#endif
-
-#ifndef INCLUDED_SC_SUBFIELD_H
 #include <sdts++/container/sc_Subfield.h>
-#endif
-
-#ifndef INCLUDED_SIO_8211CONVERTER_H
 #include <sdts++/io/sio_8211Converter.h>
-#endif
-
-static const char* ident_ = "$Id: sio_8211Converter.cpp,v 1.8 2002/11/24 22:07:43 mcoletti Exp $";
+#include <sdts++/io/sio_8211Utils.h>
+#include <sdts++/io/sio_Converter.h>
 
 static const long TwoToTheEigth = 256;
 static const long TwoToTheSixteenth = 65536;

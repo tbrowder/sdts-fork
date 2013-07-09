@@ -10,20 +10,15 @@
 // including points of contact.
 //
 
-#include <sdts++/io/sio_ConverterFactory.h>
-
 #include <cctype>
 
+#include <sdts++/io/sio_ConverterFactory.h>
 #include <sdts++/io/sio_8211Converter.h>
-
 
 using namespace std;
 
-
 /// canonical instance of sio_ConverterFactory
 std::auto_ptr<sio_ConverterFactory> sio_ConverterFactory::instance_;
-
-
 
 struct ConverterFactory_Imp
 {

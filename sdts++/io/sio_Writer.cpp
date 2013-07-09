@@ -13,62 +13,24 @@
 // sio_Writer.cpp
 //
 
-
 #include <strstream>
 #include <fstream>
-
 #include <string>
 #include <algorithm>
 #include <cstdlib>
 
-#ifndef INCLUDED_SIO_WRITER_H
-#include <sdts++/io/sio_Writer.h>
-#endif
-
-#ifndef INCLUDED_SC_RECORD_H
-#include <sdts++/container/sc_Record.h>
-#endif
-
-#ifndef INCLUDED_SC_FIELD_H
 #include <sdts++/container/sc_Field.h>
-#endif
-
-#ifndef INCLUDED_SIO_8211DR_H
-#include <sdts++/io/sio_8211DR.h>
-#endif
-
-#ifndef INCLUDED_SIO_8211DDR_H
-#include <sdts++/io/sio_8211DDR.h>
-#endif
-
-#ifndef INCLUDED_SIO8211FIELDFORMAT_H
-#include <sdts++/io/sio_8211FieldFormat.h>
-#endif
-
-#ifndef INCLUDED_SIO_8211DDRFIELD_H
-#include <sdts++/io/sio_8211DDRField.h>
-#endif
-
-#ifndef INCLUDED_SIO_BUFFER_H
-#include <sdts++/io/sio_Buffer.h>
-#endif
-
-#ifndef INCLUDED_SIO_CONVERTER_H
-#include <sdts++/io/sio_Converter.h>
-#endif
-
-#ifndef INCLUDED_SIO_8211CONVERTER_H
+#include <sdts++/container/sc_Record.h>
 #include <sdts++/io/sio_8211Converter.h>
-#endif
-
-
-
-static const char* ident_ = "$Id: sio_Writer.cpp,v 1.12 2002/11/27 00:21:34 mcoletti Exp $";
-
+#include <sdts++/io/sio_8211DDR.h>
+#include <sdts++/io/sio_8211DDRField.h>
+#include <sdts++/io/sio_8211DR.h>
+#include <sdts++/io/sio_8211FieldFormat.h>
+#include <sdts++/io/sio_Buffer.h>
+#include <sdts++/io/sio_Converter.h>
+#include <sdts++/io/sio_Writer.h>
 
 using namespace std;
-
-
 
 // returns true if the schema contains the ISO 8211 Reserved Field
 static

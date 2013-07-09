@@ -13,31 +13,15 @@
 // sio_8211DR.cpp
 //
 
-#include <sdts++/io/sio_8211DR.h>
-
 #include <vector>
- 
 
-#ifndef INCLUDED_SIO_BUFFER_H
-#include <sdts++/io/sio_Buffer.h>
-#endif
-
-#ifndef INCLUDED_SIO_8211DRLEADER_H
+#include <sdts++/io/sio_8211DR.h>
 #include <sdts++/io/sio_8211DRLeader.h>
-#endif
-
-#ifndef INCLUDED_SIO_8211DIRENTRY_H
 #include <sdts++/io/sio_8211DirEntry.h>
-#endif
-
-#ifndef INCLUDED_SIO_8211DIRECTORY_H
 #include <sdts++/io/sio_8211Directory.h>
-#endif
-
+#include <sdts++/io/sio_Buffer.h>
 
 using namespace std;
-
-
 
 sio_8211DR::sio_8211DR()
     : reuseLeaderAndDir_(false), wroteDroppedLeaderAndDir_(false)

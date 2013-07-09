@@ -27,9 +27,6 @@
 using namespace std;
 using namespace boost::filesystem;
 
-static const char * ident_ = 
-  "$Id: sio_Utils.cpp,v 1.5 2002/10/07 20:44:24 mcoletti Exp $";
-
 long
 sio_Utils::getLong(char const* buf, long startpos, long length)
 {

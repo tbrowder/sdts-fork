@@ -13,20 +13,15 @@
 // sio_8211DRLeader.cpp
 //
 
-#include <sdts++/io/sio_8211DRLeader.h>
-
 #ifdef _MSC_VER
 #pragma warning( disable : 4786 )
 using namespace std;
 #endif
 
-#ifndef INCLUDED_SIO_UTILS_H
+#include <sdts++/io/sio_8211DRLeader.h>
 #include <sdts++/io/sio_Utils.h>
-#endif
-
 
 using namespace std;
-
 
 sio_8211DRLeader::sio_8211DRLeader()
 {

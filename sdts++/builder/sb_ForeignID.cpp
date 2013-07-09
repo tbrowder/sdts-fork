@@ -10,37 +10,15 @@
 // including points of contact.
 //
 
-#include <sdts++/builder/sb_ForeignID.h>
-
-
-#ifndef INCLUDED_SIO_CONVERTERFACTORY_H
-#include <sdts++/io/sio_ConverterFactory.h>
-#endif
-
-#ifndef INCLUDED_SIO_8211CONVERTER_H
-#include <sdts++/io/sio_8211Converter.h>
-#endif
-
-#ifndef INCLUDED_SC_FIELD_H
-#include <sdts++/container/sc_Field.h>
-#endif
-
-#ifndef INCLUDED_SB_UTILS_H
-#include <sdts++/builder/sb_Utils.h>
-#endif
-
-
 #include <strstream>
 
+#include <sdts++/builder/sb_ForeignID.h>
+#include <sdts++/builder/sb_Utils.h>
+#include <sdts++/container/sc_Field.h>
+#include <sdts++/io/sio_8211Converter.h>
+#include <sdts++/io/sio_ConverterFactory.h>
 
 using namespace std;
-
-
-static const char* ident_ = 
-  "$Id: sb_ForeignID.cpp,v 1.14 2002/11/24 22:07:42 mcoletti Exp $";
-
-
-
 
 static
 char usage_type_codes_[9] =

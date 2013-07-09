@@ -15,44 +15,43 @@
 
 #include <sdts++/io/sio_Error.h>
 
-
-sio_Error::sio_Error() 
+sio_Error::sio_Error()
    : state_( goodbit ) 
 {}
 
-
-
-bool 
+bool
 sio_Error::good() const 
-{ return ! state_; }
-
-
+{
+  return ! state_;
+}
 
 bool 
 sio_Error::bad() const 
-{ return state_ & badbit; }
+{
+  return state_ & badbit;
+}
 
-
-
-bool 
+bool
 sio_Error::fail() const 
-{ return 0 != (state_ & (failbit | badbit)); }
+{
+  return 0 != (state_ & (failbit | badbit));
+}
 
-
-
-int  
+int
 sio_Error::rdstate() const 
-{ return state_; }
-
-
+{
+  return state_;
+}
 
 int  
 sio_Error::setstate( int state ) 
-{ return state_ = state; }
+{
+  return state_ = state;
+}
 
-
-
-int  
+int
 sio_Error::clear() 
-{ return state_ = goodbit; }
+{
+  return state_ = goodbit;
+}
 

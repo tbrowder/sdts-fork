@@ -17,18 +17,10 @@
 #include <typeinfo>
 #endif
 
-
 #include <sdts++/io/sio_8211DDRLeader.h>
-
-
-#ifndef INCLUDED_SIO_UTILS_H
 #include <sdts++/io/sio_Utils.h>
-#endif
-
 
 using namespace std;
-
-
 
 // returns true if the given leader has valid values
 bool

@@ -17,28 +17,16 @@
 #pragma warning( disable : 4786 )
 #endif
 
-#include <sdts++/io/sio_8211FieldFormat.h>
-
 #include <iostream>
 #include <iterator>
 #include <string>
 #include <algorithm>
 #include <functional>
 
-
-#ifndef INCLUDED_SIO8211DDRFIELD_H
-#include <sdts++/io/sio_8211DDRField.h>
-#endif
-
-
-#ifndef INCLUDED_SIO_CONVERTER_H
-#include <sdts++/io/sio_Converter.h>
-#endif
-
-#ifndef INCLUDED_SIO_8211CONVERTER_H
+#include <sdts++/io/sio_8211FieldFormat.h>
 #include <sdts++/io/sio_8211Converter.h>
-#endif
-
+#include <sdts++/io/sio_8211DDRField.h>
+#include <sdts++/io/sio_Converter.h>
 
 using namespace std;
 

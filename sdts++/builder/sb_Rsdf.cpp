@@ -10,12 +10,6 @@
 // web site at http://mcmcweb.er.usgs.gov/sdts for more information,
 // including points of contact.
 //
-// $Id: sb_Rsdf.cpp,v 1.11 2002/11/24 22:07:42 mcoletti Exp $
-//
-
-#include <sdts++/builder/sb_Rsdf.h>
-
-
 
 #include <iostream>
 #include <strstream>
@@ -23,36 +17,15 @@
 #include <limits.h>
 #include <float.h>
 
-#ifndef INCLUDED_SB_UTILS_H
-#include <sdts++/builder/sb_Utils.h>
-#endif
-
-#ifndef INCLUDED_SB_FOREIGNID_H
+#include <sdts++/builder/sb_Rsdf.h>
 #include <sdts++/builder/sb_ForeignID.h>
-#endif
-
-#ifndef INCLUDED_SC_RECORD_H
-#include <sdts++/container/sc_Record.h>
-#endif
-
-#ifndef INCLUDED_SC_FIELD_H
+#include <sdts++/builder/sb_Utils.h>
 #include <sdts++/container/sc_Field.h>
-#endif
-
-#ifndef INCLUDED_SC_SUBFIELD_H
+#include <sdts++/container/sc_Record.h>
 #include <sdts++/container/sc_Subfield.h>
-#endif
-
-#ifndef INCLUDED_SIO_8211CONVERTER_H
 #include <sdts++/io/sio_8211Converter.h>
-#endif
-
 
 using namespace std;
-
-
-
-static const char* ident_ = "$Id: sb_Rsdf.cpp,v 1.11 2002/11/24 22:07:42 mcoletti Exp $";
 
 // Strings and integers are initialized with these values; they are used
 // to indicate whether a given module value has been assigned a value or not.

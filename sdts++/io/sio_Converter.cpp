@@ -11,19 +11,9 @@
 //
 #include <stdlib.h>
 
-#ifndef INCLUDED_SIO_CONVERTER_H
-#include <sdts++/io/sio_Converter.h>
-#endif
-
-#ifndef INCLUDED_SIO_8211UTILS_H
-#include <sdts++/io/sio_8211Utils.h>
-#endif
-
-#ifndef INCLUDED_SC_SUBFIELD_H
 #include <sdts++/container/sc_Subfield.h>
-#endif
-
-
+#include <sdts++/io/sio_8211Utils.h>
+#include <sdts++/io/sio_Converter.h>
 
 long sio_Converter::findVariableSubfieldLength(char const* data,
                                    long maxLength,

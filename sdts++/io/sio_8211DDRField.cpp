@@ -15,31 +15,19 @@
 
 #include <cstring>
 
+#include <strstream>
+
 #ifdef _MSC_VER
 #pragma warning( disable : 4786 )
 #endif
 
-#include <strstream>
-
-
-
 #include <sdts++/io/sio_8211DDRField.h>
-
-#ifndef INCLUDED_SIO_8211FIELD_H
-#include <sdts++/io/sio_8211Field.h>
-#endif
-
-#ifndef INCLUDED_SIO_8211DDRLEADER_H
 #include <sdts++/io/sio_8211DDRLeader.h>
-#endif
-
+#include <sdts++/io/sio_8211Field.h>
 
 using namespace std;
 
-
-
-
-// Needed to define this else VC++ whines about no default ctor's for the 
+// Needed to define this else VC++ whines about no default ctor's for the
 // derived classes.
 sio_8211DDRField::sio_8211DDRField() 
   : fieldName_(""), arrayDescr_(""), formatControls_("")

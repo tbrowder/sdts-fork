@@ -17,13 +17,9 @@
 #include <iostream>
 #include <iterator>
 
-#ifndef INCLUDED_SIO_8211FIELDAREA_H
 #include <sdts++/io/sio_8211FieldArea.h>
-#endif
-
 
 using namespace std;
-
 
 ostream&
 sio_8211FieldArea::streamInsert(ostream& ostr) const

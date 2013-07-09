@@ -16,32 +16,20 @@
 
 #include <string>
 #include <fstream>
-
 #include <cstring>
-
 #include <algorithm>
 #include <functional>
 
-#ifndef INCLUDED_SB_UTILS_H
 #include <sdts++/builder/sb_Utils.h>
-#endif
-
 #include <sdts++/builder/sb_Iref.h>
 #include <sdts++/builder/sb_Catd.h>
 #include <sdts++/builder/sb_Ddsh.h>
-
 #include <sdts++/io/sio_ConverterFactory.h>
 #include <sdts++/io/sio_Reader.h>
-
 #include <sysutils/fileutils.h>
 #include <sysutils/stringutils.h>
 
 using namespace std;
-
-
-static const char* ident_ = 
-"$Id: sb_Utils.cpp,v 1.16 2002/03/27 23:47:46 mcoletti Exp $";
-
 
 //
 // Support Functions for sb_Utils 

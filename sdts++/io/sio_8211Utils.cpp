@@ -10,8 +10,5 @@
 // including points of contact.
 //
 
-#ifndef INCLUDED_SIO_8211UTILS_H
 #include <sdts++/io/sio_8211Utils.h>
-#endif
-
 

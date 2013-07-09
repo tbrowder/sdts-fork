@@ -13,44 +13,22 @@
 #include <utility>
 #include <algorithm>
 #include <functional>
-
 #include <iostream>
 #include <fstream>
-
 #include <string>
-
 #include <cctype>
 #include <cstring>
-
-#include <sdts++/builder/sb_Accessor.h>
-
 #include <boost/smart_ptr.hpp>
 #include <boost/filesystem/path.hpp>
 #include <boost/filesystem/operations.hpp>
 #include <boost/filesystem/fstream.hpp>
 
-
-#ifndef INCLUDED_SC_RECORD_H
-#include <sdts++/container/sc_Record.h>
-#endif
-
-#ifndef INCLUDED_SIO_READER_H
-#include <sdts++/io/sio_Reader.h>
-#endif
-
-#ifndef INCLUDED_SB_CATD_H
+#include <sdts++/builder/sb_Accessor.h>
 #include <sdts++/builder/sb_Catd.h>
-#endif
-
+#include <sdts++/container/sc_Record.h>
+#include <sdts++/io/sio_Reader.h>
 
 using namespace std;
-
-
-static const char* ident_ = 
-   "$Id: sb_Accessor.cpp,v 1.25 2003/06/10 20:51:40 mcoletti Exp $";
-
-
-
 
 
 //

@@ -13,20 +13,12 @@
 // sio_8211SubfieldFormat.cpp
 //
 
-
-#include <sdts++/io/sio_8211SubfieldFormat.h>
-
-#ifndef INCLUDED_SIO_8211UTILS_H
-#include <sdts++/io/sio_8211Utils.h>
-#endif
-
 #include <iostream>
 
+#include <sdts++/io/sio_8211SubfieldFormat.h>
+#include <sdts++/io/sio_8211Utils.h>
+
 using namespace std;
-
-
-static const char* ident_ = "$Id: sio_8211SubfieldFormat.cpp,v 1.5 2002/10/07 20:44:24 mcoletti Exp $";
-
 
 
 // This contains the implementation details for 

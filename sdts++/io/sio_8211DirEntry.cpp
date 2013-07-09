@@ -14,18 +14,10 @@
 //
 
 #include <sdts++/io/sio_8211DirEntry.h>
-
-#ifndef INCLUDED_SIO_8211LEADER_H
 #include <sdts++/io/sio_8211Leader.h>
-#endif
-
-#ifndef INCLUDED_SIO_UTILS_H
 #include <sdts++/io/sio_Utils.h>
-#endif
-
 
 using namespace std;
-
 
 sio_8211DirEntry::sio_8211DirEntry()
                 : fieldLength_(0),

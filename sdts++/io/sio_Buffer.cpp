@@ -13,11 +13,9 @@
 // sio_Buffer.cpp
 //
 
-#include <sdts++/io/sio_Buffer.h>
-
-
 #include <algorithm>
 
+#include <sdts++/io/sio_Buffer.h>
 
 //
 // Implementation for sio_Buffer.

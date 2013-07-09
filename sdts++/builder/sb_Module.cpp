@@ -10,26 +10,13 @@
 // including points of contact.
 //
 
-#include <sdts++/builder/sb_Module.h>
-
 #include <iostream>
 
-#ifndef INCLUDED_SC_RECORD_H
-#include <sdts++/container/sc_Record.h>
-#endif
-
-
-#ifndef INCLUDED_SB_FOREIGNID_H
+#include <sdts++/builder/sb_Module.h>
 #include <sdts++/builder/sb_ForeignID.h>
-#endif
-
+#include <sdts++/container/sc_Record.h>
 
 using namespace std;
-
-
-static const char* ident_ = "$Id: sb_Module.cpp,v 1.8 2002/11/24 22:07:42 mcoletti Exp $";
-
-
 
 bool 
 sb_Module::getSchema( sio_8211Schema& schema )

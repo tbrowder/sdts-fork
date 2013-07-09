@@ -18,23 +18,11 @@
 #endif
 
 #include <sdts++/io/sio_8211Record.h>
-
-#ifndef INCLUDED_SIO_8211DIRENTRY_H
 #include <sdts++/io/sio_8211DirEntry.h>
-#endif
-
-#ifndef INCLUDED_SIO_8211FIELD_H
 #include <sdts++/io/sio_8211Field.h>
-#endif
-
-#ifndef INCLUDED_SIO_8211FIELDAREA_H
 #include <sdts++/io/sio_8211FieldArea.h>
-#endif
-
-
 
 using namespace std;
-
 
 sio_8211Record::sio_8211Record()
 {

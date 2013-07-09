@@ -13,71 +13,29 @@
 // sio_Reader.cpp
 //
 
-
-#include <sdts++/io/sio_Reader.h>
-
 #include <string>
 #include <functional>
 #include <algorithm>
 #include <map>
 
-
-#ifndef INCLUDED_SIO_8211DIRECTORY_H
-#include <sdts++/io/sio_8211Directory.h>
-#endif
-
-#ifndef INCLUDED_SIO_8211DIRENTRY_H
-#include <sdts++/io/sio_8211DirEntry.h>
-#endif
-
-#ifndef INCLUDED_SIO_8211LEADER_H
-#include <sdts++/io/sio_8211Leader.h>
-#endif
-
-#ifndef INCLUDED_SIO_8211DDRLEADER_H
-#include <sdts++/io/sio_8211DDRLeader.h>
-#endif
-
-#ifndef INCLUDED_SIO_8211DDR_H
-#include <sdts++/io/sio_8211DDR.h>
-#endif
-
-#ifndef INCLUDED_SIO_8211DR_H
-#include <sdts++/io/sio_8211DR.h>
-#endif
-
-#ifndef INCLUDED_SIO_8211DDRFIELD_H
-#include <sdts++/io/sio_8211DDRField.h>
-#endif
-
-#ifndef INCLUDED_SIO_8211FIELD_H
-#include <sdts++/io/sio_8211Field.h>
-#endif
-
-#ifndef INCLUDED_SIO_CONVERTER_H
-#include <sdts++/io/sio_Converter.h>
-#endif
-
-#ifndef INCLUDED_SIO_8211CONVERTER_H
-#include <sdts++/io/sio_8211Converter.h>
-#endif
-
-#ifndef INCLUDED_SC_RECORD_H
+#include <sdts++/io/sio_Reader.h>
 #include <sdts++/container/sc_Record.h>
-#endif
-
+#include <sdts++/io/sio_8211Converter.h>
+#include <sdts++/io/sio_8211DDR.h>
+#include <sdts++/io/sio_8211DDRField.h>
+#include <sdts++/io/sio_8211DDRLeader.h>
+#include <sdts++/io/sio_8211DR.h>
+#include <sdts++/io/sio_8211DirEntry.h>
+#include <sdts++/io/sio_8211Directory.h>
+#include <sdts++/io/sio_8211Field.h>
+#include <sdts++/io/sio_8211Leader.h>
+#include <sdts++/io/sio_Converter.h>
 
 #ifdef _MSC_VER
 #pragma warning(disable:4786)
 #endif
 
 using namespace std;
-
-
-
-
-static const char* iden_ = "$Id: sio_Reader.cpp,v 1.21 2003/06/06 21:30:43 mcoletti Exp $";
-
 
 //
 // The guts for an sio_8211Reader object.

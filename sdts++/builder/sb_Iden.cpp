@@ -8,43 +8,18 @@
 // no committment to any level of support for this code.  See the SDTS
 // web site at http://mcmcweb.er.usgs.gov/sdts for more information,
 // including points of contact.
-//
-
-// $Id: sb_Iden.cpp,v 1.7 2002/11/24 22:07:42 mcoletti Exp $
-
 
 #include <iostream>
-
 
 #include <limits.h>
 
 #include <sdts++/builder/sb_Iden.h>
-
-
-#ifndef INCLUDED_SB_UTILS_H
-#include <sdts++/builder/sb_Utils.h>
-#endif
-
-
-#ifndef INCLUDED_SB_FOREIGNID_H
 #include <sdts++/builder/sb_ForeignID.h>
-#endif
-
-#ifndef INCLUDED_SC_RECORD_H
+#include <sdts++/builder/sb_Utils.h>
 #include <sdts++/container/sc_Record.h>
-#endif
-
-
-#ifndef INCLUDED_SIO_8211CONVERTER_H
 #include <sdts++/io/sio_8211Converter.h>
-#endif
-
 
 using namespace std;
-
-
-static const char* iden_ = "$Id: sb_Iden.cpp,v 1.7 2002/11/24 22:07:42 mcoletti Exp $";
-
 
 // Strings and integers are initialized with these values; they're used
 // to indicate whether a given module value has been assigned a value or not.

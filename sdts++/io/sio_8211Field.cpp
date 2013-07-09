@@ -2,30 +2,15 @@
 // sio_8211Field.cpp
 //
 
-#include <sdts++/io/sio_8211Field.h>
-
-
 #include <algorithm>
 
-#ifndef INCLUDED_SIO_BUFFER_H
-#include <sdts++/io/sio_Buffer.h>
-#endif
-
-#ifndef INCLUDED_SIO_8211DIRENTRY_H
-#include <sdts++/io/sio_8211DirEntry.h>
-#endif
-
-#ifndef INCLUDED_SIO_8211DDRLEADER_H
+#include <sdts++/io/sio_8211Field.h>
 #include <sdts++/io/sio_8211DDRLeader.h>
-#endif
-
-#ifndef INCLUDED_SIO_8211UTILS_H
+#include <sdts++/io/sio_8211DirEntry.h>
 #include <sdts++/io/sio_8211Utils.h>
-#endif
-
+#include <sdts++/io/sio_Buffer.h>
 
 using namespace std;
-
 
 sio_8211Field::sio_8211Field()
   : size_( 0 ), data_()

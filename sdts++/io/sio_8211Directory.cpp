@@ -13,25 +13,17 @@
 // sio_8211Directory.cpp
 //
 
-#include <sdts++/io/sio_8211Directory.h>
-
 #ifdef _MSC_VER
 #pragma warning( disable : 4786 )
 #endif
-
-#ifndef INCLUDED_SIO_8211DIRENTRY_H
-#include <sdts++/io/sio_8211DirEntry.h>
-#endif
-
-#ifndef INCLUDED_SIO_8211UTILS_H
-#include <sdts++/io/sio_8211Utils.h>
-#endif
-
 
 #include <algorithm>
 #include <functional>
 #include <iterator>
 
+#include <sdts++/io/sio_8211Directory.h>
+#include <sdts++/io/sio_8211DirEntry.h>
+#include <sdts++/io/sio_8211Utils.h>
 
 using namespace std;
 

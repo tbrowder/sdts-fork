@@ -19,22 +19,10 @@
 #include <typeinfo>
 #endif
 
-#ifndef INCLUDED_SIO_8211DDRLEADER_H
 #include <sdts++/io/sio_8211DDR.h>
-#endif
-
-#ifndef INCLUDED_SIO_8211DDRLEADER_H
 #include <sdts++/io/sio_8211DDRLeader.h>
-#endif
-
-#ifndef INCLUDED_SIO_8211DIRENTRY_H
 #include <sdts++/io/sio_8211DirEntry.h>
-#endif
-
-#ifndef INCLUDED_SIO_8211DIRECTORY_H
 #include <sdts++/io/sio_8211Directory.h>
-#endif
-
 
 sio_8211DDR::sio_8211DDR()
 {

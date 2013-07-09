@@ -14,12 +14,7 @@
 #include <typeinfo>
 #endif
 
-#ifndef INCLUDED_SIO_8211LEADER_H
 #include <sdts++/io/sio_8211Leader.h>
-#endif
-
-
-
 
 sio_8211Leader::sio_8211Leader()
               : recLength_(0),
