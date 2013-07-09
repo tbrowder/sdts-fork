@@ -216,12 +216,13 @@ sb_Accessor::readCatd( std::string const& catd_fn )
 {
   imp_->fileName = catd_fn;
 
-  boost::filesystem::ifstream catd_stream( catd_fn );
+  boost::filesystem::ifstream catd_stream(catd_fn);
 
-                                // bail if we can't open the CATD 
-                                // module
-
-  if ( ! catd_stream ) { return false; } 
+  // bail if we can't open the CATD module
+  if (!catd_stream ) {
+    cerr << "ERROR:  Cannot find file '" << catd_fn << "'" << endl;
+    return false;
+  }
 
 
   imp_->modules.clear();        // blow away any old entries
@@ -389,59 +390,47 @@ getModuleIterator_( sb_Accessor_Imp & accessor,
 
                                 // if the stream isn't open, make it so!
 
-  if ( ! module_itr->second.stream.get() )
-    {
-      module_itr->second.stream = 
-         boost::shared_ptr<boost::filesystem::ifstream>( new boost::filesystem::ifstream( module_itr->second.file_path, 
-                                                                                          std::ios::in )  );
+  if (!module_itr->second.stream.get()) {
+    module_itr->second.stream =
+      boost::shared_ptr<boost::filesystem::ifstream>(new boost::filesystem::ifstream(module_itr->second.file_path,
+                                                                                     std::ios::in));
 
-                                // bail if we fail to either get a new
-                                // stream or the new stream itself is
-                                // already wedged
-
-      if ( ! ((*module_itr).second.stream.get() && 
-              (*module_itr).second.stream->good() ) )
-        {
-          return false;
-        }
-                                // now let's insure that there's a
-                                // reader; if not, make a new one
-
-      if ( ! module_itr->second.reader.get() )
-        {
-          module_itr->second.reader = 
-            boost::shared_ptr<sio_8211Reader>( new sio_8211Reader( *module_itr->second.stream, cv ) );
-        }
-      else                      // we already have a reader, so just attach
-        {                       // it to the stream
-
-          module_itr->second.reader->attach( *module_itr->second.stream, cv );
-        }
-
-                                // attach the iterator, in turn, to
-                                // the reader; return since the
-                                // iterator will be pointing to the
-                                // first record in the module
-
-      fi = module_itr->second.curr_record =
-        (*module_itr).second.reader->begin();
-
-      return true;
-    }
-                                // if we get here, then we've already
-                                // read at least one record; if there
-                                // are no more records, close the
-                                // associated stream and return false
-
-  if ( (*module_itr).second.curr_record.done() )
-    {
-      (*module_itr).second.stream->close();
+    // bail if we fail to either get a new stream or the new stream
+    // itself is already wedged
+    if (!((*module_itr).second.stream.get() &&
+          (*module_itr).second.stream->good())) {
       return false;
     }
-                                // increment to the next record, if any
-                                // exist
 
-  ++(*module_itr).second.curr_record; 
+    // now let's insure that there's a reader; if not, make a new one
+    if (!module_itr->second.reader.get()) {
+      module_itr->second.reader =
+        boost::shared_ptr<sio_8211Reader>( new sio_8211Reader( *module_itr->second.stream, cv ) );
+    }
+    else {
+      // we already have a reader, so just attach it to the stream
+      module_itr->second.reader->attach(*module_itr->second.stream, cv );
+    }
+
+    // attach the iterator, in turn, to the reader; return since the
+    // iterator will be pointing to the first record in the module
+    fi = module_itr->second.curr_record =
+      (*module_itr).second.reader->begin();
+
+    return true;
+  }
+
+  // if we get here, then we've already read at least one record; if
+  // there are no more records, close the associated stream and return
+  // false
+
+  if ((*module_itr).second.curr_record.done()) {
+    (*module_itr).second.stream->close();
+    return false;
+  }
+
+  // increment to the next record, if any exist
+  ++(*module_itr).second.curr_record;
 
   fi = (*module_itr).second.curr_record;
 
