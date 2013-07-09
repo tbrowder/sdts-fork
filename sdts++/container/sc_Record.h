@@ -16,11 +16,7 @@
 #include <list>
 #include <iostream>
 
-
-#ifndef INCLUDED_SC_FIELD_H
 #include <sdts++/container/sc_Field.h>
-#endif
-
 
 /// Canonical field container
 typedef std::list<sc_Field> sc_FieldCntr;

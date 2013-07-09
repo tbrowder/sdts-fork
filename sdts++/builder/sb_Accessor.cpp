@@ -10,10 +10,6 @@
 // including points of contact.
 //
 
-
-#include <sdts++/builder/sb_Accessor.h>
-
-
 #include <utility>
 #include <algorithm>
 #include <functional>
@@ -25,6 +21,8 @@
 
 #include <cctype>
 #include <cstring>
+
+#include <sdts++/builder/sb_Accessor.h>
 
 #include <boost/smart_ptr.hpp>
 #include <boost/filesystem/path.hpp>

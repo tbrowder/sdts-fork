@@ -25,11 +25,7 @@
 #include <iostream>
 #include <list>
 
-
-#ifndef INCLUDED_SC_SUBFIELD_H
 #include <sdts++/container/sc_Subfield.h>
-#endif
-
 
 /// Canonical container type for subfields.
 typedef std::list<sc_Subfield> sc_SubfieldCntr;

@@ -12,15 +12,7 @@
 #ifndef INCLUDED_SCMULTITYPEVALUE_HXX
 #define INCLUDED_SCMULTITYPEVALUE_HXX
 
-// $Id: sc_MultiTypeValue.h,v 1.4 2002/11/24 22:07:43 mcoletti Exp $
-
-
 #include <string>
-
-
-
-
-
 
 /**
   An sc_MultiTypeValue is a container for a single value that may be

@@ -17,10 +17,7 @@
 #include <list>
 #include <iostream>
 
-#ifndef INCLUDED_SC_RECORD_H
 #include <sdts++/container/sc_Record.h>
-#endif
-
 
 /// Canonical record container type
 typedef std::list<sc_Record> sc_RecordCntr;

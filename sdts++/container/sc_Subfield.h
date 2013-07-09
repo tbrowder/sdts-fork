@@ -19,11 +19,7 @@
 #include <iostream>
 #include <string>
 
-#ifndef INCLUDED_SCMULTITYPEVALUE_HXX
 #include <sdts++/container/sc_MultiTypeValue.h>
-#endif
-
-
 
 /**
    \note
