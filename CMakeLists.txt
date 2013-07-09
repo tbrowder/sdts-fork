@@ -36,6 +36,8 @@ else()
   )
 endif()
 
+# stop some warnings
+add_definitions(-Wno-deprecated)
 
 # where to install?
 set(CMAKE_INSTALL_PREFIX "/usr/local")
