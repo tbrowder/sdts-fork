@@ -14,10 +14,6 @@ set(t_stringutils_SOURCES t_stringutils.cpp stringutils.cpp)
 add_executable(t_stringutils ${t_stringutils_SOURCES})
 
 #=== INSTALL ==================
-install(TARGETS sysutils
-        DESTINATION lib
-)
-
 install(
   FILES
     "${PROJECT_SOURCE_DIR}/sysutils/fileutils.h"
