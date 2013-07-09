@@ -3,12 +3,14 @@ add_executable(mkstat
   emit.cpp
   filename.cpp
 )
+add_dependencies(mkstat
+  "${PROJECT_BINARY_DIR}/sdts++/sdts-config.h"
+)
 
 target_link_libraries(mkstat
   boost_system
   boost_filesystem
   sdts++
-  sysutils
 )
 
 #=== INSTALL ==================

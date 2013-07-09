@@ -53,7 +53,6 @@ target_link_libraries(mksdts
   boost_system
   boost_filesystem
   fl
-  sysutils
 )
 
 #=== INSTALL ==================

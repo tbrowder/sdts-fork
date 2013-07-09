@@ -7,7 +7,6 @@ target_link_libraries(tomksdts
   boost_system
   boost_filesystem
   sdts++
-  sysutils
 )
 
 #=== INSTALL ==================

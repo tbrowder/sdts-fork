@@ -6,7 +6,6 @@ target_link_libraries(sdtsdem2xyz
   boost_system
   boost_filesystem
   sdts++
-  sysutils
 )
 
 #=== INSTALL ==================

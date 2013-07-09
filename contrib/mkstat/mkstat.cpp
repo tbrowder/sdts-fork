@@ -30,7 +30,8 @@ const int GETOPTDONE = EOF;
 #include <sdts++/builder/sb_Stat.h>
 #include <sdts++/builder/sb_Catd.h>
 
-#include "sysutils/fileutils.h"
+#include "sdts++/sysutils/fileutils.h"
+
 #include "emit.h"
 
 using namespace std;

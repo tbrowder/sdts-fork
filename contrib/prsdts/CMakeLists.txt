@@ -7,7 +7,6 @@ target_link_libraries(prsdts
   boost_filesystem
   sdts++
   fl
-  sysutils
 )
 
 #=== INSTALL ==================
