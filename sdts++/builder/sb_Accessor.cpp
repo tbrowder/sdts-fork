@@ -455,11 +455,10 @@ getModuleIterator_( sb_Accessor_Imp & accessor,
 bool
 sb_Accessor::get(sb_Module& module, sio_8211_converter_dictionary* cv)
 {
-  // first we find the iterator for the
-  // given module
-
+  // first we find the iterator for the given module
   sio_8211ForwardIterator curr_record_itr; // in sio_Reader
-  if (!getModuleIterator_(*imp_, module.getMnemonic(),
+  if (!getModuleIterator_(*imp_,
+                          module.getMnemonic(),
                           curr_record_itr,
                           cv)) {
     return false;
