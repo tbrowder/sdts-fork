@@ -22,7 +22,7 @@
 
 #include <sdts++/io/sio_Utils.h>
 #include <sdts++/io/sio_ConverterFactory.h>
-#include <sdts++/fileutils.h>
+#include <sdts++/sysutils/fileutils.h>
 
 using namespace std;
 using namespace boost::filesystem;

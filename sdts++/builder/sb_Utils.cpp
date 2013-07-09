@@ -26,8 +26,8 @@
 #include <sdts++/builder/sb_Ddsh.h>
 #include <sdts++/io/sio_ConverterFactory.h>
 #include <sdts++/io/sio_Reader.h>
-#include <sysutils/fileutils.h>
-#include <sysutils/stringutils.h>
+#include <sdts++/sysutils/fileutils.h>
+#include <sdts++/sysutils/stringutils.h>
 
 using namespace std;
 
