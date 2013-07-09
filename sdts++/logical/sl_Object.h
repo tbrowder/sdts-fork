@@ -8,15 +8,12 @@
 // no committment to any level of support for this code.  See the SDTS
 // web site at http://mcmcweb.er.usgs.gov/sdts for more information,
 // including points of contact.
-//
-// $Id: sl_Object.h,v 1.4 2000/07/25 20:05:42 mcoletti Exp $
 
 #ifndef INCLUDED_SL_OBJECT_H
 #define INCLUDED_SL_OBJECT_H
 
 #include <string>
 #include <boost/smart_ptr.hpp>
-
 
 /**
  This is a root object that is a generalization of the common

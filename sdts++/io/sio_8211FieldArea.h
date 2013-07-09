@@ -15,11 +15,7 @@
 
 #include <list>
 
-
-#ifndef INCLUDED_SIO_8211FIELD_H
 #include <sdts++/io/sio_8211Field.h>
-#endif
-
 
 ///
 typedef std::list<sio_8211Field> sio_8211FieldAreaContainer;

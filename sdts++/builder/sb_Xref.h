@@ -13,24 +13,14 @@
 #ifndef INCLUDED_SB_XREF_H
 #define INCLUDED_SB_XREF_H
 
-// $Id: sb_Xref.h,v 1.7 2002/11/24 22:07:43 mcoletti Exp $ 
-
 #include <list>
 #include <string>
 
-
-#ifndef SB_MODULE_H
 #include <sdts++/builder/sb_Module.h>
-#endif
-
-
-#ifndef INCLUDED_SIO8211FIELDFORMAT_H
 #include <sdts++/io/sio_8211FieldFormat.h>
-#endif
 
 //class  sb_ForeignID;
 class  sc_Record;
-
 
 struct sb_Xref_Imp;
 

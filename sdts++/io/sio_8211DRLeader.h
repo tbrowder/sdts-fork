@@ -18,12 +18,7 @@
 
 #include <iostream>
 
-#ifndef INCLUDED_SIO_8211LEADER_H
 #include <sdts++/io/sio_8211Leader.h>
-#endif
-
-
-
 
 /// This corresponds to a Data Record (DR) leader
 class sio_8211DRLeader : public sio_8211Leader  

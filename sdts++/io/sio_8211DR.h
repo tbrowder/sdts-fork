@@ -16,19 +16,10 @@
 #ifndef INCLUDED_SIO_8211DR_H
 #define INCLUDED_SIO_8211DR_H
 
-
-#ifndef INCLUDED_SIO_8211RECORD_H
-#include <sdts++/io/sio_8211Record.h>
-#endif
-
-#ifndef INCLUDED_SIO_8211DRLEADER_H
-#include <sdts++/io/sio_8211DRLeader.h>
-#endif
-
-
 #include <iostream>
 
-
+#include <sdts++/io/sio_8211DRLeader.h>
+#include <sdts++/io/sio_8211Record.h>
 
 class sio_8211Directory;
 

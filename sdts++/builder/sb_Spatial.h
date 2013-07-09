@@ -8,8 +8,6 @@
 // no committment to any level of support for this code.  See the SDTS
 // web site at http://mcmcweb.er.usgs.gov/sdts for more information,
 // including points of contact.
-//
-// $Id: sb_Spatial.h,v 1.10 2002/11/24 22:07:43 mcoletti Exp $
 
 #ifndef INCLUDED_SB_SPATIAL_H
 #define INCLUDED_SB_SPATIAL_H
@@ -17,12 +15,7 @@
 #include <iostream>
 #include <deque>
 
-
-#ifndef INCLUDED_SCSUBFIELD_HXX
 #include <sdts++/container/sc_Subfield.h>
-#endif
-
-
 
 /// This class represents an SDTS spatial address field
 /**

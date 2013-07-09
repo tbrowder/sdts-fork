@@ -23,11 +23,7 @@
 #include <iostream>
 #include <iomanip>
 
-#ifndef INCLUDED_SIO_8211LEADER_H
 #include <sdts++/io/sio_8211Leader.h>
-#endif
-
-
 
 /// This corresponds to the DDR leader data structure
 class sio_8211DDRLeader : public sio_8211Leader  

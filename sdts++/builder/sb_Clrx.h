@@ -9,33 +9,23 @@
 // web site at http://mcmcweb.er.usgs.gov/sdts for more information,
 // including points of contact.
 //
-// $Id: sb_Clrx.h,v 1.2 2001/05/22 05:58:34 mcoletti Exp $
-//
 #ifndef INCLUDED_SB_CLRX_H
 #define INCLUDED_SB_CLRX_H
 
 #include <list>
 #include <string>
 
-#ifndef SB_MODULE_H
 #include <sdts++/builder/sb_Module.h>
-#endif
-
-
-#ifndef INCLUDED_SIO8211FIELDFORMAT_H
 #include <sdts++/xio/sio_8211FieldFormat.h>
-#endif
 
 class  sb_ForeignID;
 class  sc_Record;
 
-
-// This class provides a convenient access to CLRX records.  It provides
-// members to access or set various module field and subfield values.
-// It also provides a mechanism for populating an object of this class with
-// values found in a valid sc_Record of this module, and for filling a
-// sc_Record with the contents of a sb_Clrx object.
-
+// This class provides a convenient access to CLRX records.  It
+// provides members to access or set various module field and subfield
+// values.  It also provides a mechanism for populating an object of
+// this class with values found in a valid sc_Record of this module,
+// and for filling a sc_Record with the contents of a sb_Clrx object.
 
 struct sb_Clrx_Imp;
 

@@ -9,42 +9,25 @@
 // web site at http://mcmcweb.er.usgs.gov/sdts for more information,
 // including points of contact.
 //
-// $Id: sb_Pnts.h,v 1.2 2002/11/24 22:07:42 mcoletti Exp $
-//
 #ifndef INCLUDED_SB_PNTS_H
 #define INCLUDED_SB_PNTS_H
-
-
 
 #include <memory>
 #include <list>
 #include <string>
 
-#ifndef SB_MODULE_H
-#include <sdts++/builder/sb_Module.h>
-#endif
-
-#ifndef INCLUDED_SB_SPATIAL_H
-#include <sdts++/builder/sb_Spatial.h>
-#endif
-
-#ifndef INCLUDED_SB_FOREIGNID_H
 #include <sdts++/builder/sb_ForeignID.h>
-#endif
-
-#ifndef INCLUDED_SIO8211FIELDFORMAT_H
+#include <sdts++/builder/sb_Module.h>
+#include <sdts++/builder/sb_Spatial.h>
 #include <sdts++/io/sio_8211FieldFormat.h>
-#endif
-
 
 class  sc_Record;
 
-
-// This class provides a convenient access to PNTS records.  It provides
-// members to access or set various module field and subfield values.
-// It also provides a mechanism for populating an object of this class with
-// values found in a valid sc_Record of this module, and for filling a
-// sc_Record with the contents of a sb_Pnts object.
+// This class provides a convenient access to PNTS records.  It
+// provides members to access or set various module field and subfield
+// values.  It also provides a mechanism for populating an object of
+// this class with values found in a valid sc_Record of this module,
+// and for filling a sc_Record with the contents of a sb_Pnts object.
 
 
 struct sb_Pnts_Imp;

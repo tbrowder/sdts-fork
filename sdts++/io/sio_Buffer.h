@@ -13,14 +13,10 @@
 // sio_Buffer.h
 //
 
-
 #ifndef INCLUDED_SIO_BUFFER_H
 #define INCLUDED_SIO_BUFFER_H
 
-
 #include <vector>
-
-
 
 class sio_BufferImp;
 

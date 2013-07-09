@@ -16,8 +16,6 @@
 #ifndef INCLUDED_SIO_ERROR_H
 #define INCLUDED_SIO_ERROR_H
 
-
-
 /**
  Mix-in error reporting class.  Patterned after ios error handling.
  

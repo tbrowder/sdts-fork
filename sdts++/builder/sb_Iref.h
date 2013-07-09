@@ -8,23 +8,14 @@
 // no committment to any level of support for this code.  See the SDTS
 // web site at http://mcmcweb.er.usgs.gov/sdts for more information,
 // including points of contact.
-//
-// $Id: sb_Iref.h,v 1.8 2002/11/24 22:07:42 mcoletti Exp $
-
 
 #ifndef INCLUDED_SB_IREF_H
 #define INCLUDED_SB_IREF_H
 
 #include <vector>
 
-#ifndef SB_MODULE_H
 #include <sdts++/builder/sb_Module.h>
-#endif
-
-#ifndef INCLUDED_SIO8211FIELDFORMAT_H
 #include <sdts++/io/sio_8211FieldFormat.h>
-#endif
-
 
 //class sb_ForeignID;
 class sc_Record;
@@ -35,7 +26,6 @@ const char* const LATITUDE    = "LATITUDE";
 const char* const LONGITUDE   = "LONGITUDE";
 const char* const EASTING     = "EASTING";
 const char* const NORTHING    = "NORTHING";
-
 
 struct sb_Iref_Imp;
 

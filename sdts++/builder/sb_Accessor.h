@@ -13,21 +13,14 @@
 #ifndef SB_ACCESSOR_H
 #define SB_ACCESSOR_H
 
-// $Id: sb_Accessor.h,v 1.9 2002/11/24 22:07:42 mcoletti Exp $
-
 #ifdef _MSC_VER
 #pragma warning( disable : 4786 )
 #endif
 
 #include <string>
 
-
 // for converter_dictionary
-
-#ifndef INCLUDED_SIO_8211FIELDFORMAT_H
 #include <sdts++/io/sio_8211FieldFormat.h>
-#endif
-
 
 class sb_Module;
 

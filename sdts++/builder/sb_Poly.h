@@ -14,7 +14,6 @@
 #ifndef INCLUDED_SB_POLY_H
 #define INCLUDED_SB_POLY_H
 
-
 #ifdef _MSC_VER
 #pragma warning( disable : 4786 )
 #endif
@@ -22,25 +21,12 @@
 #include <list>
 #include <string>
 
-#ifndef SB_MODULE_H
-#include <sdts++/builder/sb_Module.h>
-#endif
-
-#ifndef INCLUDED_SB_SPATIAL_H
-#include <sdts++/builder/sb_Spatial.h>
-#endif
-
-#ifndef INCLUDED_SB_FOREIGNID_H
 #include <sdts++/builder/sb_ForeignID.h>
-#endif
-
-#ifndef INCLUDED_SIO8211FIELDFORMAT_H
+#include <sdts++/builder/sb_Module.h>
+#include <sdts++/builder/sb_Spatial.h>
 #include <sdts++/io/sio_8211FieldFormat.h>
-#endif
-
 
 class  sc_Record;
-
 
 // This class provides a convenient access to POLY records.  It provides
 // members to access or set various module field and subfield values.

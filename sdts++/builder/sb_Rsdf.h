@@ -9,8 +9,6 @@
 // web site at http://mcmcweb.er.usgs.gov/sdts for more information,
 // including points of contact.
 //
-// $Id: sb_Rsdf.h,v 1.11 2002/11/25 19:16:13 mcoletti Exp $
-//
 // TODO:
 //
 //    Add domain checking in the set*() members
@@ -25,23 +23,11 @@
 #include <list>
 #include <string>
 
-
-#ifndef INCLUDED_SB_FOREIGNID_H
 #include <sdts++/builder/sb_ForeignID.h>
-#endif
-
-#ifndef SB_MODULE_H
 #include <sdts++/builder/sb_Module.h>
-#endif
-
-
-#ifndef INCLUDED_SIO8211FIELDFORMAT_H
 #include <sdts++/io/sio_8211FieldFormat.h>
-#endif
 
 class  sc_Record;
-
-
 
 struct sb_Rsdf_Imp;
 

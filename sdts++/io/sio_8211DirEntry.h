@@ -16,18 +16,13 @@
 #ifndef INCLUDED_SIO_8211DIRENTRY_H
 #define INCLUDED_SIO_8211DIRENTRY_H
 
-
 #include <string>
-
 #include <iostream>
 #include <iomanip>
-
 
 using std::string;
 using std::ostream;
 using std::istream;
-
-
 
 class sio_8211Leader;
 class sio_8211Field;

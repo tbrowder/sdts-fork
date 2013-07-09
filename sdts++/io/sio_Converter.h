@@ -14,13 +14,9 @@
 
 #include <string>
 
-#ifndef INCLUDED_SIO_BUFFER_H
 #include <sdts++/io/sio_Buffer.h>
-#endif
 
-#ifdef USE_NAMESPACE
 using namespace std;
-#endif
 
 class sc_Subfield;
 

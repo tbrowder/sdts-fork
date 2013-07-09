@@ -20,10 +20,7 @@
 #include <string>
 #include <iostream>
 
-
-#ifndef INCLUDED_SIO8211FIELDFORMAT_H
 #include <sdts++/io/sio_8211FieldFormat.h>
-#endif
 
 /// Simple utilities
 namespace  sio_Utils

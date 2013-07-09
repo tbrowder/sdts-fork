@@ -9,30 +9,19 @@
 // web site at http://mcmcweb.er.usgs.gov/sdts for more information,
 // including points of contact.
 //
-// $Id: sb_Ddsh.h,v 1.6 2002/11/24 22:07:42 mcoletti Exp $
-//
 #ifndef INCLUDED_SB_DDSH_H
 #define INCLUDED_SB_DDSH_H
 
 #include <list>
-
 #include <string>
 
-#ifndef SB_MODULE_H
 #include <sdts++/builder/sb_Module.h>
-#endif
-
-
-#ifndef INCLUDED_SIO8211FIELDFORMAT_H
 #include <sdts++/io/sio_8211FieldFormat.h>
-#endif
 
 class  sb_ForeignID;
 class  sc_Record;
 
-
 struct sb_Ddsh_Imp;
-
 
 /**
  This class provides a convenient access to DDSH records.  It provides

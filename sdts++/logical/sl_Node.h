@@ -8,16 +8,11 @@
 // no committment to any level of support for this code.  See the SDTS
 // web site at http://mcmcweb.er.usgs.gov/sdts for more information,
 // including points of contact.
-//
-// $Id: sl_Node.h,v 1.2 2000/07/25 20:05:42 mcoletti Exp $
 
 #ifndef INCLUDED_SL_NODE_H
 #define INCLUDED_SL_NODE_H
 
-#ifndef INCLUDED_SL_POINT_H
 #include <sdts++/logical/sl_Point.h>
-#endif
-
 
 /**
  This abstract base class represents an SDTS logical

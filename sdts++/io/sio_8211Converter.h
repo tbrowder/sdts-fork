@@ -12,14 +12,8 @@
 #ifndef INCLUDED_SIO_8211CONVERTER_H
 #define INCLUDED_SIO_8211CONVERTER_H
 
-
-#ifndef INCLUDED_SIO_BUFFER_H
 #include <sdts++/io/sio_Buffer.h>
-#endif
-
-#ifndef INCLUDED_SIO_CONVERTER_H
 #include <sdts++/io/sio_Converter.h>
-#endif
 
 /**
    A Converter converts between an SDTS subfield and 'raw' data.

@@ -16,24 +16,15 @@
 #ifndef INCLUDED_SIO_8211FIELD_H
 #define INCLUDED_SIO_8211FIELD_H
 
-
-
 #include <iostream>
 #include <vector>
 #include <string>
 
-
-#ifndef INCLUDED_SIO_8211UTILS_H
 #include <sdts++/io/sio_8211Utils.h>
-#endif
-
-
 
 class sio_Buffer;
 class sio_8211DirEntry;
 class sio_8211DDRLeader;
-
-
 
 /// This represents a generic ISO 8211 field.
 class sio_8211Field

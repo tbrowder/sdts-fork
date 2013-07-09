@@ -16,16 +16,10 @@
 #ifndef INCLUDED_SIO_8211DDR_H
 #define INCLUDED_SIO_8211DDR_H
 
-
-#ifndef INCLUDED_SIO_8211RECORD_H
-#include <sdts++/io/sio_8211Record.h>
-#endif
-
-#ifndef INCLUDED_SIO_8211DDRLEADER_H
-#include <sdts++/io/sio_8211DDRLeader.h>
-#endif
-
 #include <iostream>
+
+#include <sdts++/io/sio_8211DDRLeader.h>
+#include <sdts++/io/sio_8211Record.h>
 
 #ifdef WIN32
 using namespace std;

@@ -9,8 +9,6 @@
 // web site at http://mcmcweb.er.usgs.gov/sdts for more information,
 // including points of contact.
 //
-// $Id: sb_Cell.h,v 1.13 2002/11/24 22:07:42 mcoletti Exp $
-//
 #ifndef INCLUDED_SB_CELL_H
 #define INCLUDED_SB_CELL_H
 
@@ -20,46 +18,20 @@
 
 #include <iostream>
 #include <strstream>
-
 #include <limits.h>
 #include <float.h>
 #include <list>
 #include <string>
 #include <iterator>
 
-
-#ifndef SB_MODULE_H
-#include <sdts++/builder/sb_Module.h>
-#endif
-
-#ifndef INCLUDED_SIO8211FIELDFORMAT_H
-#include <sdts++/io/sio_8211FieldFormat.h>
-#endif
-
-#ifndef INCLUDED_SB_UTILS_H
-#include <sdts++/builder/sb_Utils.h>
-#endif
-
-#ifndef INCLUDED_SB_FOREIGNID_H
 #include <sdts++/builder/sb_ForeignID.h>
-#endif
-
-#ifndef INCLUDED_SC_RECORD_H
-#include <sdts++/container/sc_Record.h>
-#endif
-
-#ifndef INCLUDED_SC_FIELD_H
+#include <sdts++/builder/sb_Module.h>
+#include <sdts++/builder/sb_Utils.h>
 #include <sdts++/container/sc_Field.h>
-#endif
-
-#ifndef INCLUDED_SC_SUBFIELD_H
+#include <sdts++/container/sc_Record.h>
 #include <sdts++/container/sc_Subfield.h>
-#endif
-
-#ifndef INCLUDED_SIO_8211CONVERTER_H
 #include <sdts++/io/sio_8211Converter.h>
-#endif
-
+#include <sdts++/io/sio_8211FieldFormat.h>
 
 using namespace std;
 
@@ -74,7 +46,6 @@ const string  UNVALUED_STRING(1, static_cast<string::value_type>(0x4) );
 const long    UNVALUED_LONG   = INT_MIN;
 
 const double  UNVALUED_DOUBLE = DBL_MAX;
-
 
 // XXX kludge!!
 

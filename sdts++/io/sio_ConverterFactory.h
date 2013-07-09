@@ -15,8 +15,6 @@
 #include <string>
 #include <memory>
 
-
-
 class sio_8211Converter;
 
 

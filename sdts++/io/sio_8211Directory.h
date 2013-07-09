@@ -19,18 +19,9 @@
 #include <iostream>
 #include <list>
 
-#ifndef INCLUDED_SIO_8211LEADER_H
-#include <sdts++/io/sio_8211Leader.h>
-#endif
-
-#ifndef INCLUDED_SIO_8211DIRENTRY_H
 #include <sdts++/io/sio_8211DirEntry.h>
-#endif
-
-#ifndef INCLUDED_SIO_8211UTILS_H
+#include <sdts++/io/sio_8211Leader.h>
 #include <sdts++/io/sio_8211Utils.h>
-#endif
-
 
 ///
 typedef std::list<sio_8211DirEntry> sio_8211DirEntryContainer;

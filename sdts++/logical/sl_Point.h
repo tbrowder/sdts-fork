@@ -8,20 +8,12 @@
 // no committment to any level of support for this code.  See the SDTS
 // web site at http://mcmcweb.er.usgs.gov/sdts for more information,
 // including points of contact.
-//
-// $Id: sl_Point.h,v 1.5 2000/07/25 20:05:42 mcoletti Exp $
 
 #ifndef INCLUDED_SL_POINT_H
 #define INCLUDED_SL_POINT_H
 
-#ifndef INCLUDED_SL_OBJECT_H
 #include <sdts++/logical/sl_Object.h>
-#endif
-
-#ifndef INCLUDED_SB_SPATIAL_H
 #include <sdts++/builder/sb_Spatial.h>
-#endif
-
 
 /**
  This represents an SDTS logical zero-dimensional point.  This

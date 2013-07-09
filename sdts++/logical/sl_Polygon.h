@@ -8,21 +8,13 @@
 // no committment to any level of support for this code.  See the SDTS
 // web site at http://mcmcweb.er.usgs.gov/sdts for more information,
 // including points of contact.
-//
-// $Id: sl_Polygon.h,v 1.2 2000/07/25 20:05:42 mcoletti Exp $
 
 #ifndef INCLUDED_SL_POLYGON_H
 #define INCLUDED_SL_POLYGON_H
 
-#ifndef INCLUDED_SL_CHAIN_H
-#include <sdts++/logical/sl_Chain.h>
-#endif
-
-
 #include <deque>
 
-
-
+#include <sdts++/logical/sl_Chain.h>
 
 /// This represents SDTS logical polygons.
 class sl_Polygon : public sl_Object

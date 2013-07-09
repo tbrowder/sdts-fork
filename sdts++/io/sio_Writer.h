@@ -12,10 +12,8 @@
 // including points of contact.
 //
 
-
 #ifndef INCLUDED_SIO_WRITER_H
 #define INCLUDED_SIO_WRITER_H
-
 
 class sio_8211DR;
 class sio_8211DDR;
@@ -31,11 +29,7 @@ class sc_Record;
 #include <fstream>
 #include <list>
 
-
-
-#ifndef INCLUDED_SIO8211FIELDFORMAT_H
 #include <sdts++/io/sio_8211FieldFormat.h>
-#endif
 
 #ifdef _MSC_VER
 #pragma warning( disable : 4786 )

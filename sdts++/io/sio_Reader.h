@@ -21,14 +21,9 @@
 #include <list>
 #include <iostream>
 
-
-#ifndef INCLUDED_SIO8211FIELDFORMAT_H
 #include <sdts++/io/sio_8211FieldFormat.h>
-#endif
-
 
 typedef std::list<sio_8211FieldFormat> field_format_ctr;
-
 
 class sc_Record;
 class sio_8211Converter;

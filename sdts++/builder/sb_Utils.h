@@ -1,38 +1,20 @@
 #ifndef INCLUDED_SB_UTILS_H
 #define INCLUDED_SB_UTILS_H
 
-
 #ifdef WIN32
 #pragma warning( disable : 4786 )
 #endif
 
-
-#ifndef INCLUDED_SC_MODULE_H
-#include <sdts++/container/sc_Module.h>
-#endif
-
-#ifndef INCLUDED_SC_RECORD_H
-#include <sdts++/container/sc_Record.h>
-#endif
-
-#ifndef INCLUDED_SC_FIELD_H
-#include <sdts++/container/sc_Field.h>
-#endif
-
-#ifndef INCLUDED_SC_SUBFIELD_H
-#include <sdts++/container/sc_Subfield.h>
-#endif
-
-#ifndef INCLUDED_SB_FOREIGNID_H
-#include <sdts++/builder/sb_ForeignID.h>
-#endif
-
 #include <set>
 
+#include <sdts++/container/sc_Module.h>
+#include <sdts++/container/sc_Record.h>
+#include <sdts++/container/sc_Field.h>
+#include <sdts++/container/sc_Subfield.h>
+#include <sdts++/builder/sb_ForeignID.h>
 
 class sb_Iref;
 class sb_Ddsh;
-
 
 /// Several useful utility functions for use with the sb_* layer classes.
 namespace sb_Utils

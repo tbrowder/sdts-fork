@@ -13,25 +13,18 @@
 // sio_8211FieldFormat.h
 //
 
-
 #ifndef INCLUDED_SIO8211FIELDFORMAT_H
 #define INCLUDED_SIO8211FIELDFORMAT_H
-
 
 #ifdef _MSC_VER
 #pragma warning( disable : 4786 )
 #endif
 
-
-#ifndef INCLUDED_SIO8211SUBFIELDFORMAT_H
-#include <sdts++/io/sio_8211SubfieldFormat.h>
-#endif
-
-
-
 #include <list>
 #include <map>
 #include <string>
+
+#include <sdts++/io/sio_8211SubfieldFormat.h>
 
 
 ///

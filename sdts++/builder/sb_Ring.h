@@ -9,8 +9,6 @@
 // web site at http://mcmcweb.er.usgs.gov/sdts for more information,
 // including points of contact.
 //
-// $Id: sb_Ring.h,v 1.4 2002/11/27 00:21:33 mcoletti Exp $
-//
 #ifndef INCLUDED_SB_RING_H
 #define INCLUDED_SB_RING_H
 
@@ -21,22 +19,11 @@
 #include <list>
 #include <string>
 
-#ifndef SB_MODULE_H
 #include <sdts++/builder/sb_Module.h>
-#endif
 
-#ifndef INCLUDED_SB_SPATIAL_H
 #include <sdts++/builder/sb_Spatial.h>
-#endif
-
-#ifndef INCLUDED_SB_FOREIGNID_H
 #include <sdts++/builder/sb_ForeignID.h>
-#endif
-
-#ifndef INCLUDED_SIO8211FIELDFORMAT_H
 #include <sdts++/io/sio_8211FieldFormat.h>
-#endif
-
 
 class  sc_Record;
 

@@ -9,17 +9,13 @@
 // web site at http://mcmcweb.er.usgs.gov/sdts for more information,
 // including points of contact.
 //
-// $Id: sl_String.h,v 1.3 2002/11/24 22:07:44 mcoletti Exp $
 
 #ifndef INCLUDED_SL_STRING_H
 #define INCLUDED_SL_STRING_H
 
-#ifndef INCLUDED_SL_POINT_H
-#include <sdts++/logical/sl_Point.h>
-#endif
-
 #include <vector>
 
+#include <sdts++/logical/sl_Point.h>
 
 /**
  This represents an SDTS logical string, which is a container

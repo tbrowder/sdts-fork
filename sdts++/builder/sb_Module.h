@@ -13,19 +13,13 @@
 #ifndef SB_MODULE_H
 #define SB_MODULE_H
 
-// $Id: sb_Module.h,v 1.9 2002/11/24 22:07:42 mcoletti Exp $
-
 #ifdef _MSC_VER
 #pragma warning( disable : 4786 )
 #endif
 
 #include <string>
 
-
-#ifndef INCLUDED_SIO8211FIELDFORMAT_H
 #include <sdts++/io/sio_8211FieldFormat.h>
-#endif
-
 
 class sc_Record;
 class sb_ForeignID;

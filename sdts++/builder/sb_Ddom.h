@@ -9,8 +9,6 @@
 // web site at http://mcmcweb.er.usgs.gov/sdts for more information,
 // including points of contact.
 //
-// $Id: sb_Ddom.h,v 1.9 2002/11/24 22:07:42 mcoletti Exp $
-//
 #ifndef INCLUDED_SB_DDOM_H
 #define INCLUDED_SB_DDOM_H
 
@@ -21,22 +19,12 @@
 #include <list>
 #include <string>
 
-#ifndef SC_SUBFIELD_H
-#include <sdts++/container/sc_Subfield.h>
-#endif
-
-#ifndef SB_MODULE_H
 #include <sdts++/builder/sb_Module.h>
-#endif
-
-
-#ifndef INCLUDED_SIO8211FIELDFORMAT_H
+#include <sdts++/container/sc_Subfield.h>
 #include <sdts++/io/sio_8211FieldFormat.h>
-#endif
 
 class  sb_ForeignID;
 class  sc_Record;
-
 
 struct sb_Ddom_Imp;
 

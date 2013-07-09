@@ -13,12 +13,8 @@
 // sio_8211SubfieldFormat.h
 //
 
-
 #ifndef INCLUDED_SIO8211SUBFIELDFORMAT_H
 #define INCLUDED_SIO8211SUBFIELDFORMAT_H
-
-
-
 
 #if MSC__VER >= 1000
 #pragma once

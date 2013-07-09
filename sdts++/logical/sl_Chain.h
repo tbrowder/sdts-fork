@@ -8,28 +8,18 @@
 // no committment to any level of support for this code.  See the SDTS
 // web site at http://mcmcweb.er.usgs.gov/sdts for more information,
 // including points of contact.
-//
-// $Id: sl_Chain.h,v 1.6 2003/06/10 17:49:32 mcoletti Exp $
 
 #ifndef INCLUDED_SL_CHAIN_H
 #define INCLUDED_SL_CHAIN_H
 
-#ifndef INCLUDED_SL_OBJECT_H
-#include <sdts++/logical/sl_Object.h>
-#endif
-
-#ifndef INCLUDED_SB_SPATIAL_H
-#include <sdts++/builder/sb_Spatial.h>
-#endif
-
+#include <deque>
 #include <boost/smart_ptr.hpp>
 
-#include <deque>
-
+#include <sdts++/logical/sl_Object.h>
+#include <sdts++/builder/sb_Spatial.h>
 
 class sl_Node;
 class sl_Polygon;
-
 
 /// Defines the type for a container of logical layer points.
 /**

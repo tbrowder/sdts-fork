@@ -8,16 +8,11 @@
 // no committment to any level of support for this code.  See the SDTS
 // web site at http://mcmcweb.er.usgs.gov/sdts for more information,
 // including points of contact.
-//
-// $Id: sl_Ring.h,v 1.2 2000/07/25 20:05:42 mcoletti Exp $
 
 #ifndef INCLUDED_SL_RING_H
 #define INCLUDED_SL_RING_H
 
-#ifndef INCLUDED_SL_CHAIN_H
 #include <sdts++/logical/sl_Chain.h>
-#endif
-
 
 ///
 const std::string GTRingObjectCode = "RU";

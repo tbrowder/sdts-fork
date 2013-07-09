@@ -18,15 +18,8 @@
 
 #include <string>
 
-
-#ifndef INCLUDED_SIO_BUFFER_H
 #include <sdts++/io/sio_Buffer.h>
-#endif
-
-#ifndef INCLUDED_SIO8211FIELDFORMAT_H
 #include <sdts++/io/sio_8211FieldFormat.h>
-#endif
-
 
 class sio_8211DDRLeader;
 class sio_8211Field;

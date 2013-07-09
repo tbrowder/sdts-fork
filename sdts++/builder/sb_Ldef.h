@@ -9,8 +9,6 @@
 // web site at http://mcmcweb.er.usgs.gov/sdts for more information,
 // including points of contact.
 //
-// $Id: sb_Ldef.h,v 1.8 2002/11/24 22:07:42 mcoletti Exp $
-//
 // TODO:
 //
 //   - set*() should do checking
@@ -19,29 +17,18 @@
 #ifndef INCLUDED_SB_LDEF_H
 #define INCLUDED_SB_LDEF_H
 
-
 #ifdef _MSC_VER
 #pragma warning( disable : 4786 )
 #endif
 
-
 #include <list>
 #include <string>
 
-
-
-#ifndef SB_MODULE_H
 #include <sdts++/builder/sb_Module.h>
-#endif
-
-
-#ifndef INCLUDED_SIO8211FIELDFORMAT_H
 #include <sdts++/io/sio_8211FieldFormat.h>
-#endif
 
 class  sb_ForeignID;
 class  sc_Record;
-
 
 struct sb_Ldef_Imp;
 

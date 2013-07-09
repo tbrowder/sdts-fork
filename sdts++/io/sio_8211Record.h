@@ -13,31 +13,17 @@
 // sio_8211Record.h
 //
 
-
 #ifndef INCLUDED_SIO_8211RECORD_H
 #define INCLUDED_SIO_8211RECORD_H
 
 #include <iostream>
 
-
-
-#ifndef INCLUDED_SIO_8211DIRECTORY_H
 #include <sdts++/io/sio_8211Directory.h>
-#endif
-
-#ifndef INCLUDED_SIO_8211FIELDAREA_H
 #include <sdts++/io/sio_8211FieldArea.h>
-#endif
-
-#ifndef INCLUDED_SIO_8211LEADER_H
 #include <sdts++/io/sio_8211Leader.h>
-#endif
-
 
 class sio_8211Field;
 class sio_Buffer;
-
-
 
 /// Abstract class. Represents the commonality between a DDR and a DR.
 class sio_8211Record

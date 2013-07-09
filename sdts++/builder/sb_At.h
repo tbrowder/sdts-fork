@@ -9,8 +9,6 @@
 // web site at http://mcmcweb.er.usgs.gov/sdts for more information,
 // including points of contact.
 //
-// $Id: sb_At.h,v 1.7 2002/11/24 22:07:42 mcoletti Exp $
-//
 // TODO:
 //
 //  - ATSC module child class
@@ -23,24 +21,11 @@
 #include <utility>
 #include <string>
 
-
-#ifndef SB_MODULE_H
 #include <sdts++/builder/sb_Module.h>
-#endif
-
-
-#ifndef SC_SUBFIELD_H
 #include <sdts++/container/sc_Subfield.h>
-#endif
-
-
-#ifndef INCLUDED_SIO8211FIELDFORMAT_H
 #include <sdts++/io/sio_8211FieldFormat.h>
-#endif
-
 
 class  sc_Record;
-
 
 /// An attribute type is a name bound to a subfield type.
 typedef std::pair<std::string, sc_Subfield::SubfieldType> attribute_type;
